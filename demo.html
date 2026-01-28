@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo: Dark Mode & Multi-idioma</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="translations.js"></script>
+    <style>
+        .demo-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+        
+        .demo-section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .demo-title {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .demo-controls {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+        
+        .demo-btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .demo-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .demo-btn.secondary {
+            background: var(--bg-elevated);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+        }
+        
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .color-item {
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            font-size: 0.875rem;
+        }
+        
+        .color-primary { background: var(--primary-color); color: white; }
+        .color-bg-primary { background: var(--bg-primary); color: var(--text-color); border: 1px solid var(--border-color); }
+        .color-bg-secondary { background: var(--bg-secondary); color: var(--text-color); border: 1px solid var(--border-color); }
+        .color-text { background: var(--text-color); color: var(--bg-primary); }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+            background: var(--bg-elevated);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        
+        .lang-demo {
+            padding: 1.5rem;
+            background: var(--bg-elevated);
+            border-radius: var(--border-radius);
+            margin-top: 1rem;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .stat-card {
+            background: var(--bg-elevated);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            border: 2px solid var(--border-color);
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <!-- Header -->
+        <header style="text-align: center; margin-bottom: 3rem;">
+            <h1 style="color: var(--primary-color); margin-bottom: 0.5rem;">🌙 Dark Mode & 🌐 Multi-idioma</h1>
+            <p style="color: var(--text-light); font-size: 1.125rem;">Sistema completo implementado no website</p>
+        </header>
+        
+        <!-- Controles Demo -->
+        <div class="demo-section">
+            <h2 class="demo-title">🎮 Controles de Demonstração</h2>
+            <div class="demo-controls">
+                <button class="demo-btn" onclick="toggleThemeDemo()">
+                    <span id="themeIcon">☀️</span> Alternar Tema
+                </button>
+                <button class="demo-btn secondary" onclick="loadLanguage('pt-PT')">🇵🇹 Português</button>
+                <button class="demo-btn secondary" onclick="loadLanguage('en')">🇬🇧 English</button>
+            </div>
+            
+            <p style="color: var(--text-light); margin-top: 1rem;">
+                <strong>Nota:</strong> As preferências são guardadas automaticamente no localStorage
+            </p>
+        </div>
+        
+        <!-- Palette de Cores -->
+        <div class="demo-section">
+            <h2 class="demo-title">🎨 Palette de Cores Atual</h2>
+            <p style="color: var(--text-light); margin-bottom: 1rem;">
+                As cores ajustam-se automaticamente entre dark e light mode
+            </p>
+            <div class="color-palette">
+                <div class="color-item color-primary">
+                    <strong>Primária</strong><br>
+                    --primary-color
+                </div>
+                <div class="color-item color-bg-primary">
+                    <strong>BG Primário</strong><br>
+                    --bg-primary
+                </div>
+                <div class="color-item color-bg-secondary">
+                    <strong>BG Secundário</strong><br>
+                    --bg-secondary
+                </div>
+                <div class="color-item color-text">
+                    <strong>Texto</strong><br>
+                    --text-color
+                </div>
+            </div>
+        </div>
+        
+        <!-- Features -->
+        <div class="demo-section">
+            <h2 class="demo-title">✨ Funcionalidades Implementadas</h2>
+            <ul class="feature-list">
+                <li>Dark mode como padrão com transições suaves</li>
+                <li>Light mode opcional com cores profissionais</li>
+                <li>Sistema de traduções completo (PT-PT e EN)</li>
+                <li>Persistência de preferências em localStorage</li>
+                <li>Interface responsiva mobile-first</li>
+                <li>Acessibilidade (ARIA labels, navegação por teclado)</li>
+                <li>Contraste adequado em ambos os modos (WCAG AA)</li>
+                <li>Performance otimizada sem frameworks</li>
+            </ul>
+        </div>
+        
+        <!-- Demo de Tradução -->
+        <div class="demo-section">
+            <h2 class="demo-title">🌐 Exemplo de Tradução Dinâmica</h2>
+            <div class="lang-demo">
+                <h3 data-i18n="hero.title" style="margin-bottom: 1rem; color: var(--text-color);">
+                    Demasiados emails de pacientes, pedidos e mensagens para responder todos os dias?
+                </h3>
+                <p data-i18n="hero.subtitle" style="color: var(--text-light);">
+                    Organizo os emails e pedidos da tua clínica para saberes o que é urgente, 
+                    o que pode esperar e o que já tem resposta preparada — sempre com controlo total da tua parte.
+                </p>
+                <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <button class="demo-btn" data-i18n="hero.cta.primary">Falar comigo sobre a minha clínica</button>
+                    <button class="demo-btn secondary" data-i18n="hero.cta.secondary">Ver como funciona — sem compromisso</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Estatísticas -->
+        <div class="demo-section">
+            <h2 class="demo-title">📊 Estatísticas do Projeto</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Temas (Dark/Light)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Idiomas (PT/EN)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Traduções</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Frameworks</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Info Técnica -->
+        <div class="demo-section">
+            <h2 class="demo-title">🔧 Informação Técnica</h2>
+            <div style="background: var(--bg-elevated); padding: 1.5rem; border-radius: var(--border-radius); font-family: monospace; font-size: 0.9rem;">
+                <p style="margin-bottom: 0.5rem;"><strong>Tema Atual:</strong> <span id="currentTheme" style="color: var(--primary-color);">Dark Mode</span></p>
+                <p style="margin-bottom: 0.5rem;"><strong>Idioma Atual:</strong> <span id="currentLang" style="color: var(--primary-color);">pt-PT</span></p>
+                <p style="margin-bottom: 0.5rem;"><strong>LocalStorage Theme:</strong> <span id="savedTheme" style="color: var(--primary-color);">-</span></p>
+                <p style="margin-bottom: 0.5rem;"><strong>LocalStorage Language:</strong> <span id="savedLang" style="color: var(--primary-color);">-</span></p>
+            </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="demo-section" style="text-align: center; background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%); color: white;">
+            <h2 style="color: white; margin-bottom: 1rem;">🚀 Pronto para Ver o Website Completo?</h2>
+            <p style="opacity: 0.9; margin-bottom: 1.5rem;">Todas estas funcionalidades estão implementadas no website principal</p>
+            <a href="index.html" class="demo-btn" style="background: white; color: var(--primary-color);">
+                Abrir Website Completo
+            </a>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        function toggleThemeDemo() {
+            const isLight = document.body.classList.toggle('light-mode');
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            updateThemeIcon(isLight);
+            updateInfo();
+        }
+        
+        function updateThemeIcon(isLight) {
+            const icon = document.getElementById('themeIcon');
+            if (icon) {
+                icon.textContent = isLight ? '🌙' : '☀️';
+            }
+        }
+        
+        function updateInfo() {
+            const isLight = document.body.classList.contains('light-mode');
+            const lang = document.documentElement.lang || 'pt-PT';
+            
+            document.getElementById('currentTheme').textContent = isLight ? 'Light Mode' : 'Dark Mode';
+            document.getElementById('currentLang').textContent = lang;
+            document.getElementById('savedTheme').textContent = localStorage.getItem('theme') || 'dark';
+            document.getElementById('savedLang').textContent = localStorage.getItem('preferredLanguage') || 'pt-PT';
+        }
+        
+        // Atualizar info ao carregar
+        document.addEventListener('DOMContentLoaded', () => {
+            updateInfo();
+            
+            // Carregar idioma salvo
+            const savedLang = localStorage.getItem('preferredLanguage') || 'pt-PT';
+            if (typeof loadLanguage === 'function') {
+                loadLanguage(savedLang);
+            }
+            
+            // Atualizar tema icon
+            const isLight = document.body.classList.contains('light-mode');
+            updateThemeIcon(isLight);
+        });
+    </script>
+</body>
+</html>

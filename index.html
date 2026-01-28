@@ -18,7 +18,7 @@
         />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="pt_PT" />
-        <meta name="theme-color" content="#1e40af" />
+        <meta name="theme-color" content="#0f172a" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -26,6 +26,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="styles.css" />
+        <script src="translations.js"></script>
     </head>
     <body>
         <a class="skip-link" href="#main">Saltar para conteúdo</a>
@@ -47,13 +48,27 @@
                         ></span>
                     </button>
                     <ul class="nav-links" id="nav-links">
-                        <li><a href="#servicos">Serviços</a></li>
-                        <li><a href="#precos">Preços</a></li>
-                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos" data-i18n="nav.services">Serviços</a></li>
+                        <li><a href="#precos" data-i18n="nav.pricing">Preços</a></li>
+                        <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
                         <li>
-                            <a href="#contacto" class="btn-contact">Contacto</a>
+                            <a href="#contacto" class="btn-contact" data-i18n="nav.contact">Contacto</a>
                         </li>
                     </ul>
+                    <div class="nav-controls">
+                        <div class="lang-selector">
+                            <button class="lang-btn" type="button" aria-label="Selecionar idioma">
+                                <span>PT</span> <span style="font-size: 0.8em;">▼</span>
+                            </button>
+                            <div class="lang-dropdown">
+                                <div class="lang-option active" data-lang="pt-PT">Português</div>
+                                <div class="lang-option" data-lang="en">English</div>
+                            </div>
+                        </div>
+                        <button class="theme-toggle" type="button" aria-label="Alternar tema">
+                            <span class="theme-icon">☀️</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -63,18 +78,18 @@
             <section id="home" class="hero">
                 <div class="container">
                     <div class="hero-content">
-                        <h1>
+                        <h1 data-i18n="hero.title">
                             Demasiados emails de pacientes, pedidos e mensagens para responder todos os dias?
                         </h1>
-                        <p class="hero-subtitle">
+                        <p class="hero-subtitle" data-i18n="hero.subtitle">
                             Organizo os emails e pedidos da tua clínica para saberes o que é urgente, 
                             o que pode esperar e o que já tem resposta preparada — sempre com controlo total da tua parte.
                         </p>
                         <div class="hero-buttons">
-                            <a href="#contacto" class="btn btn-primary"
+                            <a href="#contacto" class="btn btn-primary" data-i18n="hero.cta.primary"
                                 >Falar comigo sobre a minha clínica</a
                             >
-                            <a href="#como-funciona" class="btn btn-secondary"
+                            <a href="#como-funciona" class="btn btn-secondary" data-i18n="hero.cta.secondary"
                                 >Ver como funciona — sem compromisso</a
                             >
                         </div>
@@ -85,48 +100,48 @@
             <!-- Como posso ajudar -->
             <section id="servicos" class="services">
                 <div class="container">
-                    <h2>Como posso ajudar</h2>
-                    <p class="section-intro">
+                    <h2 data-i18n="services.title">Como posso ajudar</h2>
+                    <p class="section-intro" data-i18n="services.intro">
                         Numa clínica, cada email pode ser um paciente à espera de resposta.
                         O problema é que nem tudo é urgente — mas tudo chega misturado.
                     </p>
 
                     <div class="services-list">
                         <div class="service-item">
-                            <h3>Organização e triagem de emails</h3>
-                            <p>
+                            <h3 data-i18n="services.item1.title">Organização e triagem de emails</h3>
+                            <p data-i18n="services.item1.desc">
                                 Separo o que é urgente do que pode esperar. Recebes uma lista organizada, 
                                 não uma caixa de correio cheia.
                             </p>
                         </div>
 
                         <div class="service-item">
-                            <h3>Separação de pedidos de marcação, dúvidas e mensagens internas</h3>
-                            <p>
+                            <h3 data-i18n="services.item2.title">Separação de pedidos de marcação, dúvidas e mensagens internas</h3>
+                            <p data-i18n="services.item2.desc">
                                 Marcações, dúvidas de pacientes, orçamentos e emails internos ficam 
                                 organizados em categorias claras.
                             </p>
                         </div>
 
                         <div class="service-item">
-                            <h3>Sugestões de resposta para perguntas frequentes</h3>
-                            <p>
+                            <h3 data-i18n="services.item3.title">Sugestões de resposta para perguntas frequentes</h3>
+                            <p data-i18n="services.item3.desc">
                                 Para perguntas comuns, preparo respostas que apenas precisas de rever e enviar. 
-                                <strong>Sempre revistas por ti.</strong>
+                                <strong data-i18n="services.item3.highlight">Sempre revistas por ti.</strong>
                             </p>
                         </div>
 
                         <div class="service-item">
-                            <h3>Resumos claros de mensagens longas</h3>
-                            <p>
+                            <h3 data-i18n="services.item4.title">Resumos claros de mensagens longas</h3>
+                            <p data-i18n="services.item4.desc">
                                 Mensagens extensas transformadas em resumos simples. 
                                 Percebes logo o essencial sem ler tudo.
                             </p>
                         </div>
 
                         <div class="service-item">
-                            <h3>Relatórios simples e fáceis de entender</h3>
-                            <p>
+                            <h3 data-i18n="services.item5.title">Relatórios simples e fáceis de entender</h3>
+                            <p data-i18n="services.item5.desc">
                                 Vês como está a correr: quantos pedidos, quantas respostas, o que está em atraso. 
                                 Sem complicações.
                             </p>
@@ -138,28 +153,28 @@
             <!-- Exemplo Prático -->
             <section class="example">
                 <div class="container">
-                    <h2>Exemplo real</h2>
-                    <p class="example-intro">
+                    <h2 data-i18n="example.title">Exemplo real</h2>
+                    <p class="example-intro" data-i18n="example.intro">
                         Uma clínica recebe pedidos de marcação, orçamentos, dúvidas de pacientes 
                         e emails internos todos os dias.
                     </p>
                     
                     <div class="example-content">
-                        <p>Em vez de leres tudo, recebes uma lista organizada:</p>
+                        <p data-i18n="example.text">Em vez de leres tudo, recebes uma lista organizada:</p>
                         <ul class="example-list">
-                            <li><strong>Urgente</strong> (responder hoje)</li>
-                            <li><strong>Marcações</strong></li>
-                            <li><strong>Dúvidas frequentes</strong></li>
-                            <li><strong>Para tratar mais tarde</strong></li>
+                            <li><strong data-i18n="example.urgent">Urgente</strong> <span data-i18n="example.urgent.desc">(responder hoje)</span></li>
+                            <li><strong data-i18n="example.bookings">Marcações</strong></li>
+                            <li><strong data-i18n="example.faq">Dúvidas frequentes</strong></li>
+                            <li><strong data-i18n="example.later">Para tratar mais tarde</strong></li>
                         </ul>
-                        <p>
+                        <p data-i18n="example.conclusion">
                             Se um paciente faz uma pergunta comum, já tens uma resposta sugerida.
                             Só precisas de rever e enviar.
                         </p>
                     </div>
                     
                     <div class="trust-message">
-                        <strong>Nenhuma resposta é enviada automaticamente. Tens sempre a palavra final.</strong>
+                        <strong data-i18n="example.trust">Nenhuma resposta é enviada automaticamente. Tens sempre a palavra final.</strong>
                     </div>
                 </div>
             </section>
