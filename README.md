@@ -1,14 +1,14 @@
 # Nuno Miranda - Website Pessoal
 
 [![Deploy Status](https://img.shields.io/badge/deploy-GitHub%20Pages-success)](https://github.com/0xNunoMiranda/nunomiranda-dev)
-[![SSL Status](https://img.shields.io/badge/SSL-HTTPS%20Enabled-brightgreen)](https://www.nunomiranda.dev)
-[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fwww.nunomiranda.dev)](https://www.nunomiranda.dev)
+[![SSL Status](https://img.shields.io/badge/SSL-HTTPS%20Enabled-brightgreen)](https://www.nunomiranda.pt)
+[![Website Status](https://img.shields.io/website?url=https%3A%2F%2Fwww.nunomiranda.pt)](https://www.nunomiranda.pt)
 
 Website pessoal com serviços digitais para pequenas e médias empresas, hospedado no GitHub Pages com SSL/HTTPS gratuito.
 
 ## 🌐 Website
 
-**URL:** [https://www.nunomiranda.dev](https://www.nunomiranda.dev)
+**URL:** [https://www.nunomiranda.pt](https://www.nunomiranda.pt)
 
 ## 🔒 Configuração SSL/HTTPS
 
@@ -33,21 +33,21 @@ Apenas precisas de:
 1. Vai ao repositório no GitHub
 2. Clica em **Settings** (Definições)
 3. No menu lateral, clica em **Pages**
-4. Em **Custom domain**, insere: `www.nunomiranda.dev`
+4. Em **Custom domain**, insere: `www.nunomiranda.pt`
 5. Clica em **Save** (Guardar)
 6. Aguarda a verificação DNS (pode demorar alguns minutos)
 
 ### 2. Configurar os Registos DNS
 
-Acede ao painel de controlo DNS do teu fornecedor de domínio (onde compraste `nunomiranda.dev`) e adiciona os seguintes registos:
+Acede ao painel de controlo DNS do teu fornecedor de domínio (onde compraste `nunomiranda.pt`) e adiciona os seguintes registos:
 
-#### Opção A: Usar www.nunomiranda.dev (Recomendado)
+#### Opção A: Usar www.nunomiranda.pt (Recomendado)
 
 | Tipo  | Nome/Host | Valor/Target              | TTL  |
 |-------|-----------|---------------------------|------|
 | CNAME | www       | 0xnunomiranda.github.io   | 3600 |
 
-#### Opção B: Usar nunomiranda.dev (Apex Domain)
+#### Opção B: Usar nunomiranda.pt (Apex Domain)
 
 Se quiseres que o domínio principal (sem www) também funcione:
 
@@ -61,7 +61,7 @@ Se quiseres que o domínio principal (sem www) também funcione:
 
 **Notas importantes:**
 - Os valores exatos de "Nome/Host" podem variar conforme o fornecedor de domínio
-- Alguns fornecedores usam `@` para o domínio principal, outros usam `nunomiranda.dev` ou deixam em branco
+- Alguns fornecedores usam `@` para o domínio principal, outros usam `nunomiranda.pt` ou deixam em branco
 - O TTL (Time To Live) pode ser ajustado conforme necessário
 
 ### 3. Ativar HTTPS
@@ -77,7 +77,7 @@ Depois de configurar o domínio e os registos DNS:
 
 ### 4. Verificar se o SSL está Ativo
 
-1. Acede a `https://www.nunomiranda.dev` no teu browser
+1. Acede a `https://www.nunomiranda.pt` no teu browser
 2. Verifica se aparece um **cadeado verde** ou **ícone de segurança** na barra de endereços
 3. Clica no cadeado para ver os detalhes do certificado
 4. Confirma que o certificado é válido e emitido por "Let's Encrypt"
@@ -121,7 +121,7 @@ Depois de configurar o domínio e os registos DNS:
 
 ### O site funciona com HTTP mas não com HTTPS
 
-**Problema:** `http://www.nunomiranda.dev` funciona mas `https://www.nunomiranda.dev` não.
+**Problema:** `http://www.nunomiranda.pt` funciona mas `https://www.nunomiranda.pt` não.
 
 **Solução:**
 - O certificado SSL ainda está a ser gerado
@@ -135,7 +135,7 @@ Depois de configurar o domínio e os registos DNS:
 
 **Solução:**
 - Pode ser cache do browser - limpa a cache e tenta novamente
-- Verifica se o domínio em CNAME está correto (`www.nunomiranda.dev`)
+- Verifica se o domínio em CNAME está correto (`www.nunomiranda.pt`)
 - Certifica-te de que estás a aceder ao domínio correto (com ou sem www)
 - Se tiveres mudado recentemente o domínio, aguarda algumas horas
 

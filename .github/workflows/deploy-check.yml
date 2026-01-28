@@ -1,0 +1,54 @@
+name: Deploy Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Verify required files
+        run: |
+          set -euo pipefail
+          echo "🔍 Checking for required files..."
+          files=("index.html" "styles.css" "script.js" "CNAME" "README.md")
+          for file in "${files[@]}"; do
+            test -f "$file" && echo "✅ $file found" || (echo "❌ $file not found" && exit 1)
+          done
+
+      - name: Validate basic HTML structure
+        run: |
+          set -euo pipefail
+          echo "🔍 Validating HTML structure..."
+          if grep -q "<html" index.html && grep -q "</html>" index.html && grep -q "<head" index.html && grep -q "</head>" index.html && grep -q "<body" index.html && grep -q "</body>" index.html; then
+            echo "✅ HTML structure looks OK"
+          else
+            echo "❌ HTML structure validation failed"
+            exit 1
+          fi
+
+      - name: Check CNAME file
+        run: |
+          set -euo pipefail
+          echo "🔍 Checking CNAME configuration..."
+          domain="$(tr -d '\r\n' < CNAME)"
+          echo "📄 Content: ${domain}"
+          if [ -z "${domain}" ]; then
+            echo "❌ CNAME is empty"
+            exit 1
+          fi
+
+      - name: Summary
+        if: success()
+        run: |
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "🎉 All validation checks passed!"
+          echo "✅ Website is ready for deployment"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
