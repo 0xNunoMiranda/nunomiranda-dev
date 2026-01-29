@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - Barbearia | Marcação Online</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #8b6f47;
+            --primary-dark: #6b5435;
+            --primary-light: #a6896b;
+            --accent-color: #d4a574;
+            --text-color: #f5f1eb;
+            --text-light: #e8ddd0;
+            --bg-primary: #1a1612;
+            --bg-secondary: #2a241f;
+            --bg-elevated: #3a332c;
+            --bg-overlay: rgba(26, 22, 18, 0.85);
+            --border-color: #5a4a3a;
+            --shadow-md: 0 8px 24px rgba(139, 111, 71, 0.25);
+            --border-radius: 12px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--bg-primary);
+            background-image: url('https://i.etsystatic.com/33607814/r/il/35f909/4244454926/il_fullxfull.4244454926_cxl2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--bg-overlay);
+            z-index: 0;
+        }
+
+        .header {
+            background: rgba(42, 36, 31, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .back-link {
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .back-link:hover {
+            background: rgba(58, 51, 44, 0.6);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .booking-section .container {
+            max-width: 800px;
+        }
+
+        .demo-card {
+            background: rgba(42, 36, 31, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+
+        .demo-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .demo-header h2 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .demo-header p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .mode-selector {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+
+        .mode-btn {
+            padding: 0.75rem 1.5rem;
+            background: rgba(58, 51, 44, 0.8);
+            border: 2px solid var(--border-color);
+            color: var(--text-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+
+        .mode-btn.active {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .mode-btn:hover {
+            background: rgba(107, 84, 53, 0.6);
+        }
+
+        .mode-btn.active:hover {
+            background: var(--primary-dark);
+        }
+
+        .chat-container {
+            display: none;
+        }
+
+        .chat-container.active {
+            display: block;
+        }
+
+        .chat-messages {
+            background: rgba(26, 22, 18, 0.7);
+            backdrop-filter: blur(5px);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            min-height: 400px;
+            max-height: 500px;
+            overflow-y: auto;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .message {
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message.user {
+            align-items: flex-end;
+        }
+
+        .message.bot {
+            align-items: flex-start;
+        }
+
+        .message-content {
+            max-width: 70%;
+            padding: 0.75rem 1rem;
+            border-radius: 12px;
+            word-wrap: break-word;
+        }
+
+        .message.user .message-content {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .message.bot .message-content {
+            background: rgba(58, 51, 44, 0.8);
+            color: var(--text-color);
+        }
+
+        .chat-input-container {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .chat-input {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            background: rgba(58, 51, 44, 0.8);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-color);
+            font-size: 1rem;
+        }
+
+        .chat-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .voice-container {
+            display: none;
+            text-align: center;
+        }
+
+        .voice-container.active {
+            display: block;
+        }
+
+        .voice-status {
+            background: rgba(58, 51, 44, 0.8);
+            backdrop-filter: blur(5px);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .voice-status p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .voice-btn {
+            padding: 1.5rem 3rem;
+            font-size: 1.25rem;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .voice-btn:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+        }
+
+        .voice-btn.recording {
+            background: #c97d4a;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .voice-response {
+            background: rgba(58, 51, 44, 0.8);
+            backdrop-filter: blur(5px);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border: 1px solid var(--border-color);
+            min-height: 100px;
+        }
+
+        .voice-response p {
+            color: var(--text-color);
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid var(--text-light);
+            border-radius: 50%;
+            border-top-color: var(--primary-color);
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .error {
+            color: #ef4444;
+            background: rgba(239, 68, 68, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 4rem 2rem;
+            background: rgba(26, 22, 18, 0.6);
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contact-item {
+            background: rgba(58, 51, 44, 0.8);
+            backdrop-filter: blur(5px);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-item strong {
+            color: var(--accent-color);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-item p {
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        /* Footer */
+        .main-footer {
+            background: rgba(42, 36, 31, 0.95);
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .main-footer p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-header {
+                padding: 1rem;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .main-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .demo-card {
+                padding: 1.5rem;
+            }
+
+            .mode-selector {
+                flex-direction: column;
+            }
+
+            .message-content {
+                max-width: 85%;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-content">
+            <h1>✂️ Barbearia Clássica</h1>
+            <nav class="main-nav">
+                <a href="#inicio">Início</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-content">
+            <h2>Cortes Clássicos com Tradição</h2>
+            <p>Bem-vindo à nossa barbearia. Cortes tradicionais, ambiente acolhedor e atenção personalizada.</p>
+            <a href="#marcacao" class="btn btn-hero">Marcar Corte</a>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Os Nossos Serviços</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>✂️ Corte Básico</h3>
+                    <p>Corte de cabelo tradicional com acabamento profissional</p>
+                    <span class="price">15€</span>
+                </div>
+                <div class="service-card">
+                    <h3>🧔 Corte + Barba</h3>
+                    <p>Corte de cabelo e barba com acabamento completo</p>
+                    <span class="price">20€</span>
+                </div>
+                <div class="service-card">
+                    <h3>⭐ Corte Premium</h3>
+                    <p>Corte completo com tratamentos e acabamento premium</p>
+                    <span class="price">25€</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="about-section">
+        <div class="container">
+            <h2 class="section-title">Sobre Nós</h2>
+            <div class="about-content">
+                <p>
+                    A nossa barbearia combina tradição e modernidade. Com anos de experiência, oferecemos 
+                    cortes clássicos e contemporâneos num ambiente acolhedor e profissional.
+                </p>
+                <p>
+                    Funcionamos de segunda a sábado, das 9h às 19h. Estamos aqui para cuidar do seu visual 
+                    com atenção aos detalhes e dedicação ao cliente.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marcação / Chatbot -->
+    <section id="marcacao" class="booking-section">
+        <div class="container">
+            <div class="demo-card">
+                <div class="demo-header">
+                    <h2>Marcar um Corte</h2>
+                    <p>Escolha como prefere marcar: por chat ou por voz</p>
+                </div>
+
+            <div class="mode-selector">
+                <button class="mode-btn active" data-mode="chat">💬 Chat</button>
+                <button class="mode-btn" data-mode="voice">🎤 Voz</button>
+            </div>
+
+            <!-- Chat Mode -->
+            <div class="chat-container active" id="chat-container">
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message bot">
+                        <div class="message-content">
+                            Olá! Bem-vindo à nossa barbearia. Como posso ajudá-lo hoje? Quer marcar um corte?
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <input 
+                        type="text" 
+                        class="chat-input" 
+                        id="chat-input" 
+                        placeholder="Escreva a sua mensagem..."
+                        autocomplete="off"
+                    />
+                    <button class="btn" id="send-btn">Enviar</button>
+                </div>
+            </div>
+
+            <!-- Voice Mode -->
+            <div class="voice-container" id="voice-container">
+                <div class="voice-status">
+                    <p>Clique no botão abaixo e fale para marcar o seu corte</p>
+                    <button class="voice-btn" id="voice-btn">
+                        🎤
+                    </button>
+                    <p id="voice-status-text" style="margin-top: 1rem;">Pronto para ouvir</p>
+                </div>
+                <div class="voice-response" id="voice-response">
+                    <p>A resposta aparecerá aqui...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scroll para navegação
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        const HUGGING_FACE_API_KEY = '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';
+        
+        // Contexto para a AI entender que é uma barbearia
+        const BARBERSHOP_CONTEXT = `Você é um assistente virtual de uma barbearia. 
+        Você ajuda clientes a marcar cortes de cabelo, informa sobre horários disponíveis, preços e serviços.
+        Seja amigável, profissional e direto. 
+        Horários disponíveis: Segunda a Sábado, 9h às 19h.
+        Preços: Corte básico - 15€, Corte + Barba - 20€, Corte premium - 25€.
+        Sempre confirme o dia e hora quando alguém quiser marcar.`;
+
+        // Mode switching
+        const modeBtns = document.querySelectorAll('.mode-btn');
+        const chatContainer = document.getElementById('chat-container');
+        const voiceContainer = document.getElementById('voice-container');
+
+        modeBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modeBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const mode = btn.dataset.mode;
+                if (mode === 'chat') {
+                    chatContainer.classList.add('active');
+                    voiceContainer.classList.remove('active');
+                } else {
+                    chatContainer.classList.remove('active');
+                    voiceContainer.classList.add('active');
+                }
+            });
+        });
+
+        // Chat functionality
+        const chatMessages = document.getElementById('chat-messages');
+        const chatInput = document.getElementById('chat-input');
+        const sendBtn = document.getElementById('send-btn');
+        let chatHistory = [];
+
+        function addMessage(text, isUser) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user' : 'bot'}`;
+            
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'message-content';
+            contentDiv.textContent = text;
+            
+            messageDiv.appendChild(contentDiv);
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Função para interpretar mensagem e gerar resposta contextual
+        function interpretMessage(msg, history) {
+            const lowerMsg = msg.toLowerCase();
+            const lastBotResponse = history.length > 0 ? history[history.length - 1].bot.toLowerCase() : '';
+            
+            // Detectar data e hora na mensagem
+            const timeMatch = lowerMsg.match(/(\d{1,2})[h:]?(\d{0,2})/);
+            const time = timeMatch ? `${timeMatch[1]}${timeMatch[2] ? ':' + timeMatch[2] : 'h'}` : null;
+            
+            // Detectar dia da semana ou "amanhã"
+            let day = null;
+            if (lowerMsg.includes('amanhã') || lowerMsg.includes('amanha')) {
+                const tomorrow = new Date();
+                tomorrow.setDate(tomorrow.getDate() + 1);
+                const dayNames = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado'];
+                day = dayNames[tomorrow.getDay()];
+            } else if (lowerMsg.includes('segunda') || lowerMsg.includes('segunda-feira')) {
+                day = 'segunda';
+            } else if (lowerMsg.includes('terça') || lowerMsg.includes('terca') || lowerMsg.includes('terça-feira')) {
+                day = 'terça';
+            } else if (lowerMsg.includes('quarta') || lowerMsg.includes('quarta-feira')) {
+                day = 'quarta';
+            } else if (lowerMsg.includes('quinta') || lowerMsg.includes('quinta-feira')) {
+                day = 'quinta';
+            } else if (lowerMsg.includes('sexta') || lowerMsg.includes('sexta-feira')) {
+                day = 'sexta';
+            } else if (lowerMsg.includes('sábado') || lowerMsg.includes('sabado')) {
+                day = 'sábado';
+            } else if (lowerMsg.includes('domingo')) {
+                day = 'domingo';
+            }
+            
+            // Se tem data e hora, confirmar marcação
+            if (day && time) {
+                if (day === 'domingo') {
+                    return 'Desculpe, aos domingos estamos fechados. Que tal outro dia da semana?';
+                }
+                return `Perfeito! ${day.charAt(0).toUpperCase() + day.slice(1)} às ${time} está disponível. Posso confirmar essa marcação?`;
+            }
+            
+            // Se só tem hora
+            if (time && !day) {
+                return `Entendido! Que dia da semana prefere para as ${time}?`;
+            }
+            
+            // Se só tem dia
+            if (day && !time) {
+                if (day === 'domingo') {
+                    return 'Desculpe, aos domingos estamos fechados. Que tal outro dia da semana?';
+                }
+                return `${day.charAt(0).toUpperCase() + day.slice(1)} temos disponibilidade. Que hora prefere? Temos horários das 9h às 19h.`;
+            }
+            
+            // Detectar intenção de marcação
+            if (lowerMsg.includes('marcar') || lowerMsg.includes('agendar') || lowerMsg.includes('reservar') || 
+                (lowerMsg.includes('quero') && (lowerMsg.includes('corte') || lowerMsg.includes('cabelo'))) ||
+                lowerMsg.includes('seria possivel') || lowerMsg.includes('seria possível')) {
+                return 'Claro! Que dia da semana prefere? E que hora? Temos disponibilidade de segunda a sábado, das 9h às 19h.';
+            }
+            
+            // Detectar confirmação
+            if (lowerMsg.includes('sim') || lowerMsg.includes('confirmar') || lowerMsg.includes('ok') || 
+                lowerMsg.includes('perfeito') || lowerMsg.includes('ótimo') || lowerMsg.includes('pode') ||
+                lowerMsg.includes('quero') || lowerMsg.includes('gostaria')) {
+                if (lastBotResponse.includes('confirmar') || lastBotResponse.includes('disponível')) {
+                    return 'Excelente! A sua marcação está confirmada. Enviaremos um lembrete no dia anterior. Obrigado e até breve!';
+                }
+                return 'Ótimo! Mais alguma coisa em que possa ajudar?';
+            }
+            
+            // Detectar preços
+            if (lowerMsg.includes('preço') || lowerMsg.includes('quanto') || lowerMsg.includes('custa') || 
+                lowerMsg.includes('valor')) {
+                return 'Os nossos preços: Corte básico - 15€, Corte + Barba - 20€, Corte premium - 25€. Qual prefere?';
+            }
+            
+            // Detectar horários
+            if (lowerMsg.includes('horário') || lowerMsg.includes('horario') || lowerMsg.includes('aberto') || 
+                lowerMsg.includes('funciona')) {
+                return 'Funcionamos de segunda a sábado, das 9h às 19h. Domingo fechado. Que dia prefere?';
+            }
+            
+            // Detectar serviços
+            if (lowerMsg.includes('serviço') || lowerMsg.includes('servico') || lowerMsg.includes('fazem') || 
+                lowerMsg.includes('oferecem')) {
+                return 'Oferecemos: cortes de cabelo, barba, corte + barba, e tratamentos. Quer marcar algum?';
+            }
+            
+            // Detectar despedida
+            if (lowerMsg.includes('obrigado') || lowerMsg.includes('obrigada') || lowerMsg.includes('tchau') || 
+                lowerMsg.includes('até')) {
+                return 'De nada! Estamos à sua disposição. Até breve!';
+            }
+            
+            // Resposta genérica mas contextual
+            return 'Como posso ajudá-lo? Quer marcar um corte, saber preços ou horários?';
+        }
+
+        async function sendChatMessage() {
+            const message = chatInput.value.trim();
+            if (!message) return;
+
+            addMessage(message, true);
+            chatInput.value = '';
+            sendBtn.disabled = true;
+            sendBtn.textContent = 'A enviar...';
+
+            // Add loading message
+            const loadingDiv = document.createElement('div');
+            loadingDiv.className = 'message bot';
+            loadingDiv.innerHTML = '<div class="message-content"><span class="loading"></span> A pensar...</div>';
+            chatMessages.appendChild(loadingDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            // Simular um pequeno delay para parecer mais natural
+            setTimeout(() => {
+                try {
+                    // Usar interpretação contextual inteligente (sem API devido a CORS)
+                    const botResponse = interpretMessage(message, chatHistory);
+                    
+                    // Remove loading message
+                    chatMessages.removeChild(loadingDiv);
+
+                    addMessage(botResponse, false);
+                    chatHistory.push({ user: message, bot: botResponse });
+
+                } catch (error) {
+                    console.error('Error:', error);
+                    chatMessages.removeChild(loadingDiv);
+                    
+                    // Usar interpretação contextual como fallback
+                    const botResponse = interpretMessage(message, chatHistory);
+                    addMessage(botResponse, false);
+                }
+
+                sendBtn.disabled = false;
+                sendBtn.textContent = 'Enviar';
+            }, 500);
+        }
+
+        sendBtn.addEventListener('click', sendChatMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendChatMessage();
+            }
+        });
+
+        // Voice functionality
+        const voiceBtn = document.getElementById('voice-btn');
+        const voiceStatusText = document.getElementById('voice-status-text');
+        const voiceResponse = document.getElementById('voice-response');
+        
+        let recognition = null;
+        let synthesis = null;
+
+        // Check browser support
+        if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            recognition = new SpeechRecognition();
+            recognition.lang = 'pt-PT';
+            recognition.continuous = false;
+            recognition.interimResults = false;
+        }
+
+        if ('speechSynthesis' in window) {
+            synthesis = window.speechSynthesis;
+        }
+
+        let isListening = false;
+
+        voiceBtn.addEventListener('click', () => {
+            if (!recognition) {
+                voiceResponse.innerHTML = '<p class="error">O seu navegador não suporta reconhecimento de voz. Use o Chrome ou Edge.</p>';
+                return;
+            }
+
+            if (isListening) {
+                recognition.stop();
+                voiceBtn.classList.remove('recording');
+                voiceStatusText.textContent = 'Parado';
+                isListening = false;
+            } else {
+                recognition.start();
+                voiceBtn.classList.add('recording');
+                voiceStatusText.textContent = 'A ouvir...';
+                isListening = true;
+            }
+        });
+
+        if (recognition) {
+            recognition.onresult = async (event) => {
+                try {
+                    // Verificar se há resultados
+                    if (!event.results || event.results.length === 0) {
+                        throw new Error('Nenhum resultado de voz');
+                    }
+                    
+                    const transcript = event.results[0][0].transcript;
+                    
+                    if (!transcript || transcript.trim().length === 0) {
+                        throw new Error('Transcrição vazia');
+                    }
+                    
+                    // Usar interpretação contextual (sem API devido a CORS)
+                    const botResponse = interpretMessage(transcript, []);
+
+                    if (voiceResponse) {
+                        voiceResponse.innerHTML = `
+                            <p><strong>Disse:</strong> ${transcript}</p>
+                            <p style="margin-top: 1rem;"><strong>Resposta:</strong> ${botResponse}</p>
+                        `;
+                    }
+
+                    // Speak the response
+                    if (synthesis) {
+                        const utterance = new SpeechSynthesisUtterance(botResponse);
+                        utterance.lang = 'pt-PT';
+                        utterance.rate = 0.9;
+                        synthesis.speak(utterance);
+                    }
+                } catch (error) {
+                    console.error('Error processing voice:', error);
+                    
+                    // Tentar obter transcript mesmo com erro
+                    let transcript = 'Não foi possível entender';
+                    try {
+                        if (event.results && event.results.length > 0) {
+                            transcript = event.results[0][0].transcript || 'Não foi possível entender';
+                        }
+                    } catch (e) {
+                        console.error('Error getting transcript:', e);
+                    }
+                    
+                    // Usar interpretação contextual como fallback
+                    const botResponse = interpretMessage(transcript, []);
+                    
+                    if (voiceResponse) {
+                        voiceResponse.innerHTML = `
+                            <p><strong>Disse:</strong> ${transcript}</p>
+                            <p style="margin-top: 1rem;"><strong>Resposta:</strong> ${botResponse}</p>
+                        `;
+                    }
+
+                    if (synthesis) {
+                        const utterance = new SpeechSynthesisUtterance(botResponse);
+                        utterance.lang = 'pt-PT';
+                        utterance.rate = 0.9;
+                        synthesis.speak(utterance);
+                    }
+                }
+
+                if (voiceBtn) {
+                    voiceBtn.classList.remove('recording');
+                }
+                if (voiceStatusText) {
+                    voiceStatusText.textContent = 'Pronto para ouvir';
+                }
+                isListening = false;
+            };
+
+            recognition.onerror = (event) => {
+                console.error('Speech recognition error:', event.error);
+                
+                if (voiceBtn) {
+                    voiceBtn.classList.remove('recording');
+                }
+                if (voiceStatusText) {
+                    voiceStatusText.textContent = 'Erro ao ouvir';
+                }
+                isListening = false;
+                
+                if (voiceResponse) {
+                    let errorMsg = 'Erro ao processar a voz. Tente novamente.';
+                    if (event.error === 'no-speech') {
+                        errorMsg = 'Não foi detectada nenhuma fala. Tente novamente.';
+                    } else if (event.error === 'network') {
+                        errorMsg = 'Erro de rede. Verifique a sua ligação.';
+                    }
+                    voiceResponse.innerHTML = `<p class="error">${errorMsg}</p>`;
+                }
+            };
+
+            recognition.onend = () => {
+                voiceBtn.classList.remove('recording');
+                voiceStatusText.textContent = 'Pronto para ouvir';
+                isListening = false;
+            };
+        } else {
+            voiceResponse.innerHTML = '<p class="error">O seu navegador não suporta reconhecimento de voz. Use o Chrome ou Edge.</p>';
+        }
+    </script>
+</body>
+</html>
