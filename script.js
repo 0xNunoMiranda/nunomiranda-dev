@@ -1,27 +1,29 @@
 // Smooth scroll para links de navegação
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    const href = this.getAttribute("href");
-    if (!href || href === "#") return;
-    
-    e.preventDefault();
-    const target = document.querySelector(href);
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      const href = this.getAttribute("href");
+      if (!href || href === "#") return;
       
-      // Fechar menu mobile se estiver aberto
-      const menu = document.querySelector(".nav-links");
-      const menuBtn = document.querySelector(".mobile-menu-btn");
-      if (menu && menuBtn && window.innerWidth <= 768) {
-        menu.classList.remove("active");
-        menuBtn.setAttribute("aria-expanded", "false");
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+        
+        // Fechar menu mobile se estiver aberto
+        const menu = document.querySelector(".nav-links");
+        const menuBtn = document.querySelector(".mobile-menu-btn");
+        if (menu && menuBtn && window.innerWidth <= 768) {
+          menu.classList.remove("active");
+          menuBtn.setAttribute("aria-expanded", "false");
+        }
       }
-    }
+    });
   });
-});
+}
 
 // Sistema de Idiomas
 function initLanguageSystem() {
@@ -54,21 +56,15 @@ function initLanguageSystem() {
     });
   });
   
-  // Carregar idioma inicial (IP/locale do utilizador via idioma do navegador)
+  // Carregar idioma inicial (padrão: pt-PT)
   const savedLang = localStorage.getItem('preferredLanguage');
   let initialLang = 'pt-PT';
 
   if (savedLang) {
     initialLang = savedLang;
-  } else if (typeof navigator !== 'undefined' && navigator.language) {
-    const browserLang = navigator.language.toLowerCase();
-    if (browserLang.startsWith('pt')) {
-      initialLang = 'pt-PT';
-    } else if (browserLang.startsWith('es')) {
-      initialLang = 'es';
-    } else {
-      initialLang = 'en';
-    }
+  } else {
+    // Sempre usar pt-PT como padrão
+    initialLang = 'pt-PT';
   }
 
   if (typeof loadLanguage === 'function') {
@@ -172,5 +168,6 @@ if (menuBtn && menu) {
 
 // Inicializar sistemas ao carregar página
 document.addEventListener('DOMContentLoaded', () => {
+  initSmoothScroll();
   initLanguageSystem();
 });
