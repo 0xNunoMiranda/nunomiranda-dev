@@ -6,23 +6,29 @@
 }
 
 :root {
-    /* Dark Mode (mais leve e respirável) */
-    --primary-color: #38bdf8;
-    --primary-dark: #0ea5e9;
-    --primary-light: #7dd3fc;
-    --secondary-color: #64748b;
-    --accent-color: #38bdf8;
-    --text-color: #e5e7eb;
-    --text-light: #9ca3af;
-    --text-muted: #6b7280;
-    --bg-primary: #020617;
-    --bg-secondary: #020617;
-    --bg-elevated: #0b1220;
-    --bg-light: #111827;
-    --border-color: #1f2937;
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.6);
-    --shadow-lg: 0 24px 60px rgba(15, 23, 42, 0.8);
+    /* Dark Mode renovado - mais claro e moderno */
+    --primary-color: #6366f1;
+    --primary-dark: #4f46e5;
+    --primary-light: #818cf8;
+    --secondary-color: #8b5cf6;
+    --accent-color: #06b6d4;
+    --text-color: #f1f5f9;
+    --text-light: #cbd5e1;
+    --text-muted: #94a3b8;
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-elevated: #334155;
+    --bg-light: #475569;
+    --border-color: #475569;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+    --shadow-md: 0 8px 24px rgba(99, 102, 241, 0.15);
+    --shadow-lg: 0 16px 48px rgba(99, 102, 241, 0.2);
+    
+    /* Gradientes */
+    --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%);
+    --gradient-secondary: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    --gradient-card: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    --gradient-hero: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
     
     /* Espaçamentos */
     --spacing-xs: 0.5rem;
@@ -33,7 +39,7 @@
     
     /* Layout */
     --max-width: 1140px;
-    --border-radius: 8px;
+    --border-radius: 12px;
     --transition: all 0.3s ease;
 }
 
@@ -138,12 +144,13 @@ a:hover {
 
 /* Navegação */
 .nav {
-    background: var(--bg-secondary);
+    background: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(20px);
     box-shadow: var(--shadow-sm);
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(99, 102, 241, 0.2);
 }
 
 .nav-content {
@@ -274,12 +281,24 @@ section {
 
 /* Hero */
 .hero {
-    background: radial-gradient(circle at top, rgba(56, 189, 248, 0.12), transparent 55%),
-                radial-gradient(circle at bottom, rgba(56, 189, 248, 0.12), transparent 55%),
-                #020617;
+    background: var(--gradient-hero);
     padding: calc(var(--spacing-xl) * 1.1) 0 var(--spacing-xl);
     text-align: left;
-    border-bottom: 1px solid rgba(15, 23, 42, 0.8);
+    border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .hero-content {
@@ -327,14 +346,31 @@ section {
 }
 
 .btn-primary {
-    background: var(--primary-color);
+    background: var(--gradient-primary);
     color: white;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
 }
 
 .btn-primary:hover {
-    background: var(--primary-dark);
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover::before {
+    left: 100%;
 }
 
 .btn-secondary {
@@ -381,16 +417,36 @@ section {
 }
 
 .service-item {
-    background: var(--bg-elevated);
+    background: var(--gradient-card);
+    backdrop-filter: blur(10px);
     padding: var(--spacing-lg);
     border-radius: var(--border-radius);
-    border: 1px solid rgba(148, 163, 184, 0.15);
+    border: 1px solid rgba(99, 102, 241, 0.2);
     transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 .service-item:hover {
     box-shadow: var(--shadow-md);
     transform: translateY(-4px);
+    border-color: rgba(99, 102, 241, 0.4);
+}
+
+.service-item:hover::before {
+    transform: scaleX(1);
 }
 
 .service-item h3 {
@@ -405,8 +461,11 @@ section {
 
 /* Exemplo */
 .example {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
+    background-image: radial-gradient(circle at 10% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+                      radial-gradient(circle at 90% 80%, rgba(99, 102, 241, 0.08) 0%, transparent 50%);
     padding: var(--spacing-xl) 0;
+    position: relative;
 }
 
 .example-intro {
@@ -456,9 +515,11 @@ section {
 
 /* Preços */
 .pricing {
-    background: radial-gradient(circle at top, rgba(56, 189, 248, 0.08), transparent 60%),
-                #020617;
+    background: var(--bg-primary);
+    background-image: radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
     padding: var(--spacing-xl) 0;
+    position: relative;
 }
 
 .pricing h2 {
@@ -474,34 +535,60 @@ section {
 }
 
 .pricing-card {
-    background: var(--bg-elevated);
-    border: 1px solid rgba(148, 163, 184, 0.25);
+    background: var(--gradient-card);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(99, 102, 241, 0.2);
     border-radius: var(--border-radius);
     padding: var(--spacing-lg);
     transition: var(--transition);
     position: relative;
+    overflow: hidden;
+}
+
+.pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 .pricing-card:hover {
     box-shadow: var(--shadow-lg);
     transform: translateY(-6px);
+    border-color: rgba(99, 102, 241, 0.5);
+}
+
+.pricing-card:hover::before {
+    transform: scaleX(1);
 }
 
 .pricing-card.featured {
     border-color: var(--primary-color);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-md);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(139, 92, 246, 0.15) 100%);
+}
+
+.pricing-card.featured::before {
+    transform: scaleX(1);
+    height: 5px;
 }
 
 .badge {
     position: absolute;
     top: -12px;
     right: 20px;
-    background: var(--primary-color);
+    background: var(--gradient-primary);
     color: white;
     padding: 0.375rem 1rem;
     border-radius: 20px;
     font-size: 0.875rem;
     font-weight: 600;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
 }
 
 .pricing-header h3 {
@@ -550,6 +637,19 @@ section {
 
 .pricing-body ul.limits li::before {
     content: "•";
+}
+
+.pricing-includes-starter {
+    background: var(--gradient-card);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+    color: var(--primary-light);
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.1);
 }
 
 .pricing-note {
@@ -657,7 +757,7 @@ section {
 .step-number {
     width: 60px;
     height: 60px;
-    background: var(--primary-color);
+    background: var(--gradient-primary);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -666,6 +766,7 @@ section {
     font-size: 1.5rem;
     font-weight: 700;
     margin: 0 auto var(--spacing-md);
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
 }
 
 .step h3 {
@@ -732,10 +833,34 @@ section {
 
 /* CTA Final */
 .cta-final {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    background: var(--gradient-primary);
     color: white;
     text-align: center;
     padding: var(--spacing-xl) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-final::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
 }
 
 .cta-final h2 {

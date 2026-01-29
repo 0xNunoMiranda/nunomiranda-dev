@@ -56,10 +56,11 @@ const translations = {
         'pricing.starter.limit2': 'Alterações maiores combinadas e orçamentadas à parte',
         'pricing.starter.renewal': 'Renovação anual: 100€ · Manutenção: 10€ / mês',
 
-        'pricing.shop.name': 'ADD-ON — Loja Online Básica (PrestaShop)',
-        'pricing.shop.initial.label': '350€',
-        'pricing.shop.initial.suffix': '/ a partir de',
+        'pricing.shop.name': 'Loja Online',
+        'pricing.shop.initial.label': '200€',
+        'pricing.shop.initial.suffix': '/ pagamento inicial',
         'pricing.shop.subtitle': 'Para quem quer vender online sem complicações.',
+        'pricing.shop.includes.starter': 'Inclui o Plano Starter.',
         'pricing.shop.feature1': 'Loja online funcional',
         'pricing.shop.feature2': 'Atualizações feitas com cuidado',
         'pricing.shop.feature3': 'Pequenos ajustes incluídos',
@@ -67,9 +68,10 @@ const translations = {
         'pricing.shop.maintenance': 'Manutenção da loja: 40€ / mês',
 
         'pricing.support.name': 'PLANO ATENDIMENTO — Chat e Voz Assistidos',
-        'pricing.support.price.label': '30€',
-        'pricing.support.price.suffix': '/ mês, a partir de',
+        'pricing.support.price.label': '200€',
+        'pricing.support.price.suffix': '/ pagamento inicial',
         'pricing.support.subtitle': 'Para quem recebe muitas mensagens e quer tudo organizado.',
+        'pricing.support.includes.starter': 'Inclui o Plano Starter.',
         'pricing.support.feature1': 'Atendimento por chat assistido',
         'pricing.support.feature2': 'Mensagens fora de horas preparadas com antecedência',
         'pricing.support.feature3': 'Organização de pedidos e contactos por tema',
@@ -90,6 +92,10 @@ const translations = {
         'examples.clinic.desc': 'Marcações claras, lembretes preparados e mensagens profissionais fora de horas, sem parecerem frias.',
         'examples.restaurant.title': 'Restaurante',
         'examples.restaurant.desc': 'Reservas por mensagem, respostas simples sobre menus e horários. Menos chamadas, menos confusão.',
+        'examples.bakery.title': 'Padaria',
+        'examples.bakery.desc': 'Encomendas de bolos e pães organizadas por data, respostas rápidas sobre disponibilidade e preços. Tudo organizado sem perder tempo.',
+        'examples.workshop.title': 'Oficina',
+        'examples.workshop.desc': 'Marcações de serviços automotivos, pedidos de orçamento organizados e respostas claras sobre disponibilidade. Menos interrupções durante o trabalho.',
         'examples.note': 'Em todas as situações, a ideia é a mesma: menos chamadas, menos confusão, mais tranquilidade.',
 
         // Sobre
@@ -108,7 +114,7 @@ const translations = {
         'contact.email': 'Email:',
         'contact.website': 'Website:',
         'contact.location': 'Localização:',
-        'contact.location.value': 'Portugal',
+        'contact.location.value': 'Portugal | Vila Nova de Gaia',
         'contact.note': 'Pode ligar, enviar email ou mensagem. O objetivo é tirar-lhe peso dos ombros, não acrescentar trabalho.',
 
         // Footer
@@ -172,10 +178,11 @@ const translations = {
         'pricing.starter.limit2': 'Bigger changes are agreed and quoted beforehand',
         'pricing.starter.renewal': 'Yearly renewal: €100 · Maintenance: €10 / month',
 
-        'pricing.shop.name': 'ADD-ON — Basic Online Shop (PrestaShop)',
-        'pricing.shop.initial.label': 'from €350',
-        'pricing.shop.initial.suffix': '',
+        'pricing.shop.name': 'Online Shop',
+        'pricing.shop.initial.label': '€200',
+        'pricing.shop.initial.suffix': '/ initial payment',
         'pricing.shop.subtitle': 'For those who want to sell online without complications.',
+        'pricing.shop.includes.starter': 'Includes the Starter Plan.',
         'pricing.shop.feature1': 'Working online shop',
         'pricing.shop.feature2': 'Careful updates',
         'pricing.shop.feature3': 'Small tweaks included',
@@ -183,9 +190,10 @@ const translations = {
         'pricing.shop.maintenance': 'Shop maintenance: €40 / month',
 
         'pricing.support.name': 'SERVICE PLAN — Assisted Chat & Voice',
-        'pricing.support.price.label': 'from €30',
-        'pricing.support.price.suffix': '/ month',
+        'pricing.support.price.label': '€200',
+        'pricing.support.price.suffix': '/ initial payment',
         'pricing.support.subtitle': 'For those who receive many messages and want everything organised.',
+        'pricing.support.includes.starter': 'Includes the Starter Plan.',
         'pricing.support.feature1': 'Assisted chat handling',
         'pricing.support.feature2': 'Prepared out-of-hours messages',
         'pricing.support.feature3': 'Requests and contacts organised by topic',
@@ -206,6 +214,10 @@ const translations = {
         'examples.clinic.desc': 'Clear appointments, prepared reminders and professional out-of-hours messages that still sound human.',
         'examples.restaurant.title': 'Restaurant',
         'examples.restaurant.desc': 'Bookings by message, simple answers about menus and hours. Fewer calls, less noise.',
+        'examples.bakery.title': 'Bakery',
+        'examples.bakery.desc': 'Cake and bread orders organised by date, quick answers about availability and prices. Everything organised without wasting time.',
+        'examples.workshop.title': 'Auto Repair Shop',
+        'examples.workshop.desc': 'Automotive service bookings, organised quote requests and clear answers about availability. Fewer interruptions during work.',
         'examples.note': 'In every case the idea is the same: fewer calls, less confusion, more peace of mind.',
 
         // About
@@ -224,7 +236,7 @@ const translations = {
         'contact.email': 'Email:',
         'contact.website': 'Website:',
         'contact.location': 'Location:',
-        'contact.location.value': 'Portugal',
+        'contact.location.value': 'Portugal | Vila Nova de Gaia',
         'contact.note': 'You can call, send an email or a message. The goal is to take weight off your shoulders, not add more work.',
 
         // Footer
@@ -288,10 +300,11 @@ const translations = {
         'pricing.starter.limit2': 'Cambios mayores se hablan y se presupuestan aparte',
         'pricing.starter.renewal': 'Renovación anual: 100€ · Mantenimiento: 10€ / mes',
 
-        'pricing.shop.name': 'ADD-ON — Tienda Online Básica (PrestaShop)',
-        'pricing.shop.initial.label': 'desde 350€',
-        'pricing.shop.initial.suffix': '',
+        'pricing.shop.name': 'Tienda Online',
+        'pricing.shop.initial.label': '200€',
+        'pricing.shop.initial.suffix': '/ pago inicial',
         'pricing.shop.subtitle': 'Para quien quiere vender online sin complicaciones.',
+        'pricing.shop.includes.starter': 'Incluye el Plan Starter.',
         'pricing.shop.feature1': 'Tienda online funcional',
         'pricing.shop.feature2': 'Actualizaciones cuidadas',
         'pricing.shop.feature3': 'Pequeños ajustes incluidos',
@@ -299,9 +312,10 @@ const translations = {
         'pricing.shop.maintenance': 'Mantenimiento de la tienda: 40€ / mes',
 
         'pricing.support.name': 'PLAN ATENCIÓN — Chat y Voz Asistidos',
-        'pricing.support.price.label': 'desde 30€',
-        'pricing.support.price.suffix': '/ mes',
+        'pricing.support.price.label': '200€',
+        'pricing.support.price.suffix': '/ pago inicial',
         'pricing.support.subtitle': 'Para quien recibe muchos mensajes y quiere todo organizado.',
+        'pricing.support.includes.starter': 'Incluye el Plan Starter.',
         'pricing.support.feature1': 'Atención asistida por chat',
         'pricing.support.feature2': 'Mensajes preparados para fuera de horario',
         'pricing.support.feature3': 'Organización de pedidos y contactos por tema',
@@ -322,6 +336,10 @@ const translations = {
         'examples.clinic.desc': 'Reservas claras, recordatorios preparados y mensajes profesionales fuera de horario, sin sonar fríos.',
         'examples.restaurant.title': 'Restaurante',
         'examples.restaurant.desc': 'Reservas por mensaje, respuestas sencillas sobre menús y horarios. Menos llamadas, menos lío.',
+        'examples.bakery.title': 'Panadería',
+        'examples.bakery.desc': 'Pedidos de pasteles y panes organizados por fecha, respuestas rápidas sobre disponibilidad y precios. Todo organizado sin perder tiempo.',
+        'examples.workshop.title': 'Taller',
+        'examples.workshop.desc': 'Reservas de servicios automotrices, pedidos de presupuesto organizados y respuestas claras sobre disponibilidad. Menos interrupciones durante el trabajo.',
         'examples.note': 'En todos los casos la idea es la misma: menos llamadas, menos confusión, más tranquilidad.',
 
         // Sobre mí
@@ -340,7 +358,7 @@ const translations = {
         'contact.email': 'Email:',
         'contact.website': 'Web:',
         'contact.location': 'Localización:',
-        'contact.location.value': 'Portugal',
+        'contact.location.value': 'Portugal | Vila Nova de Gaia',
         'contact.note': 'Puede llamar, enviar un email o un mensaje. La idea es quitarle peso de encima, no añadir trabajo.',
 
         // Footer
