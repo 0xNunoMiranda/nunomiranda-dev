@@ -57,7 +57,8 @@ const translations = {
         'pricing.starter.feature4': 'Apoio básico',
         'pricing.starter.limit1': 'Até 1 alteração simples por mês',
         'pricing.starter.limit2': 'Alterações maiores combinadas e orçamentadas à parte',
-        'pricing.starter.renewal': 'Manutenção: 10€ / mês',
+        'pricing.starter.maintenance': 'Manutenção: 10€ / mês',
+        'pricing.starter.renewal': 'Renovação anual: 100€',
 
         'pricing.shop.name': 'PLANO ECOMMERCE<br>Loja Online',
         'pricing.shop.initial.label': '200€',
@@ -79,7 +80,7 @@ const translations = {
         'pricing.support.feature2': 'Mensagens fora de horas preparadas com antecedência',
         'pricing.support.feature3': 'Organização de pedidos e contactos por tema',
         'pricing.support.feature4': 'Resumos claros do que foi pedido',
-        'pricing.support.setup': 'A partir de 20€ / mês (Valor mensal aplicado consoante o teu negócio.)',
+        'pricing.support.setup': 'A partir de 20€ / mês',
 
         'pricing.note.title': 'Nota importante:',
         'pricing.note.text': 'Todos os preços são falados com calma antes de avançar. Se for preciso algo fora do combinado, explico primeiro, sem pressão. Sem letras pequenas.',
@@ -183,7 +184,8 @@ const translations = {
         'pricing.starter.feature4': 'Basic support',
         'pricing.starter.limit1': 'Up to 1 simple change per month',
         'pricing.starter.limit2': 'Bigger changes are agreed and quoted beforehand',
-        'pricing.starter.renewal': 'Maintenance: €10 / month',
+        'pricing.starter.maintenance': 'Maintenance: €10 / month',
+        'pricing.starter.renewal': 'Yearly renewal: €100',
 
         'pricing.shop.name': 'ECOMMERCE PLAN<br>Online Shop',
         'pricing.shop.initial.label': '€200',
@@ -205,7 +207,7 @@ const translations = {
         'pricing.support.feature2': 'Prepared out-of-hours messages',
         'pricing.support.feature3': 'Requests and contacts organised by topic',
         'pricing.support.feature4': 'Clear summaries of what was requested',
-        'pricing.support.setup': 'From €20 / month (Monthly value applied according to your business.)',
+        'pricing.support.setup': 'From €20 / month',
 
         'pricing.note.title': 'Important note:',
         'pricing.note.text': 'Prices are always discussed calmly before moving forward. If something outside the original agreement is needed, I explain it first, with no pressure. No fine print.',
@@ -309,7 +311,8 @@ const translations = {
         'pricing.starter.feature4': 'Apoyo básico',
         'pricing.starter.limit1': 'Hasta 1 cambio sencillo al mes',
         'pricing.starter.limit2': 'Cambios mayores se hablan y se presupuestan aparte',
-        'pricing.starter.renewal': 'Mantenimiento: 10€ / mes',
+        'pricing.starter.maintenance': 'Mantenimiento: 10€ / mes',
+        'pricing.starter.renewal': 'Renovación anual: 100€',
 
         'pricing.shop.name': 'PLAN ECOMMERCE<br>Tienda Online',
         'pricing.shop.initial.label': '200€',
@@ -331,7 +334,7 @@ const translations = {
         'pricing.support.feature2': 'Mensajes preparados para fuera de horario',
         'pricing.support.feature3': 'Organización de pedidos y contactos por tema',
         'pricing.support.feature4': 'Resúmenes claros de lo que se ha pedido',
-        'pricing.support.setup': 'Desde 20€ / mes (Valor mensual aplicado según su negocio.)',
+        'pricing.support.setup': 'Desde 20€ / mes',
 
         'pricing.note.title': 'Nota importante:',
         'pricing.note.text': 'Los precios se hablan siempre con calma antes de avanzar. Si hace falta algo fuera de lo acordado, se explica primero, sin presión. Sin letra pequeña.',
