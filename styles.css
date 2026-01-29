@@ -130,6 +130,8 @@ h4 {
 p {
     margin-bottom: var(--spacing-sm);
     color: var(--text-color);
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 a {
@@ -277,6 +279,8 @@ section {
     color: var(--text-light);
     margin-bottom: var(--spacing-lg);
     max-width: 700px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 /* Hero */
@@ -316,6 +320,8 @@ section {
     color: var(--text-light);
     margin-bottom: var(--spacing-md);
     line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .hero-note {
@@ -457,6 +463,8 @@ section {
 .service-item p {
     color: var(--text-light);
     line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 /* Exemplo */
@@ -473,6 +481,8 @@ section {
     color: var(--text-light);
     margin-bottom: var(--spacing-lg);
     max-width: 700px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .example-content {
@@ -481,6 +491,11 @@ section {
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
     margin-bottom: var(--spacing-md);
+}
+
+.example-content p {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .example-list {
@@ -891,6 +906,8 @@ section {
     line-height: 1.8;
     color: var(--text-color);
     margin-bottom: var(--spacing-md);
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 @media (min-width: 768px) {
