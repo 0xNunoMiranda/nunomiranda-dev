@@ -11,7 +11,7 @@ const translations = {
         'nav.contact': 'Contactos',
 
         // Hero
-        'hero.title': 'Esteja online, organize mensagens e marque clientes — sem stress nem interrupções.',
+        'hero.title': 'Esteja online, organize mensagens e marque clientes sem stress nem interrupções.',
         'hero.subtitle': 'Planos simples, limites claros. Tu trabalhas, nós cuidamos do resto.',
         'hero.cta.primary': 'Peça uma proposta grátis',
         'hero.cta.secondary': 'Veja exemplos em ação',
@@ -30,7 +30,7 @@ const translations = {
 
         // O que faço
         'services.title': 'Como isso poupa tempo e dores de cabeça',
-        'services.intro': 'Trabalho para que o seu negócio esteja bem apresentado online e para que o atendimento por mensagens seja organizado, simples e tranquilo.',
+        'services.intro': 'Trabalho para que o teu negócio esteja bem apresentado online e para que o atendimento por mensagens seja organizado, simples e tranquilo.',
         'services.item1.title': 'Site limpo e atualizado sem esforço',
         'services.item1.desc': 'Site limpo, moderno e fácil de ler. Atualizo textos, horários e preços quando precisas. Não tens de mexer em nada.',
         'services.item2.title': 'Mensagens organizadas e prioritárias',
@@ -79,7 +79,7 @@ const translations = {
         'pricing.support.feature2': 'Mensagens fora de horas preparadas com antecedência',
         'pricing.support.feature3': 'Organização de pedidos e contactos por tema',
         'pricing.support.feature4': 'Resumos claros do que foi pedido',
-        'pricing.support.setup': 'A partir de 20€ / mês (Valor mensal aplicado consoante o seu negócio.)',
+        'pricing.support.setup': 'A partir de 20€ / mês (Valor mensal aplicado consoante o teu negócio.)',
 
         'pricing.note.title': 'Nota importante:',
         'pricing.note.text': 'Todos os preços são falados com calma antes de avançar. Se for preciso algo fora do combinado, explico primeiro, sem pressão. Sem letras pequenas.',
@@ -137,7 +137,7 @@ const translations = {
         'nav.contact': 'Contact',
 
         // Hero
-        'hero.title': 'Be online, organize messages and book clients — without stress or interruptions.',
+        'hero.title': 'Be online, organize messages and book clients without stress or interruptions.',
         'hero.subtitle': 'Simple plans, clear limits. You work, we take care of the rest.',
         'hero.cta.primary': 'Request a free quote',
         'hero.cta.secondary': 'See examples in action',
@@ -263,7 +263,7 @@ const translations = {
         'nav.contact': 'Contacto',
 
         // Hero
-        'hero.title': 'Esté online, organice mensajes y reserve clientes — sin estrés ni interrupciones.',
+        'hero.title': 'Esté online, organice mensajes y reserve clientes sin estrés ni interrupciones.',
         'hero.subtitle': 'Planes simples, límites claros. Usted trabaja, nosotros cuidamos del resto.',
         'hero.cta.primary': 'Solicite un presupuesto gratis',
         'hero.cta.secondary': 'Vea ejemplos en acción',
