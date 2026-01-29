@@ -979,14 +979,37 @@ section {
     margin-right: auto;
 }
 
+.cta-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .cta-final .btn-primary {
-    background: #020617;
-    color: var(--primary-light);
+    background: white;
+    color: var(--primary-color);
 }
 
 .cta-final .btn-primary:hover {
-    background: #020617;
+    background: var(--bg-light);
     transform: translateY(-2px);
+}
+
+.cta-final .btn-secondary {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 2px solid white;
+}
+
+.cta-final .btn-secondary:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+.cta-section {
+    text-align: center;
+    margin-top: var(--spacing-xl);
 }
 
 /* Contacto */
