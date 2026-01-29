@@ -44,7 +44,7 @@ const translations = {
         'pricing.includes': 'Inclui:',
         'pricing.limits': 'Limites:',
 
-        'pricing.starter.name': 'PLANO STARTER Presença Online',
+        'pricing.starter.name': 'PLANO STARTER<br>Presença Online',
         'pricing.starter.initial.label': '100€',
         'pricing.starter.initial.suffix': '/ pagamento inicial',
         'pricing.starter.subtitle': 'Ideal para quem só quer estar online e não pensar mais nisso.',
@@ -56,7 +56,7 @@ const translations = {
         'pricing.starter.limit2': 'Alterações maiores combinadas e orçamentadas à parte',
         'pricing.starter.renewal': 'Renovação anual: 100€ · Manutenção: 10€ / mês',
 
-        'pricing.shop.name': 'PLANO ECOMMERCE Loja Online',
+        'pricing.shop.name': 'PLANO ECOMMERCE<br>Loja Online',
         'pricing.shop.initial.label': '200€',
         'pricing.shop.initial.suffix': '/ pagamento inicial',
         'pricing.shop.subtitle': 'Para quem quer vender online sem complicações.',
@@ -67,10 +67,10 @@ const translations = {
         'pricing.shop.feature4': 'Apoio contínuo',
         'pricing.shop.maintenance': 'Manutenção da loja: 40€ / mês',
 
-        'pricing.support.name': 'PLANO AGENT Chat e Voz Assistidos',
+        'pricing.support.name': 'PLANO AGENT<br>Chat e Voz Assistidos',
         'pricing.support.price.label': '200€',
         'pricing.support.price.suffix': '/ pagamento inicial',
-        'pricing.support.subtitle': 'Para quem recebe muitas mensagens e quer tudo organizado.',
+        'pricing.support.subtitle': 'Mensagens organizadas.',
         'pricing.support.includes.starter': 'Inclui o Plano Starter.',
         'pricing.support.feature1': 'Atendimento por chat assistido',
         'pricing.support.feature2': 'Mensagens fora de horas preparadas com antecedência',
@@ -85,17 +85,17 @@ const translations = {
         'examples.title': 'Exemplos práticos',
         'examples.intro': 'Alguns exemplos de como este tipo de serviço pode ajudar no dia a dia de um negócio local:',
         'examples.barbershop.title': 'Barbearia',
-        'examples.barbershop.desc': 'O João quer marcar para sábado às 10h. Envia mensagem enquanto está a cortar cabelo a outro cliente. Em vez de interromper o trabalho, recebe a mensagem organizada e responde quando terminar. O João recebe confirmação rápida e não precisa de ligar.',
+        'examples.barbershop.desc': 'O João quer marcar um corte para sábado às 10h. Envia uma mensagem enquanto o barbeiro está a cortar o cabelo a outro cliente. O pedido fica registado automaticamente. Se o João ligar, a chamada recebe uma resposta clara a explicar como marcar ou que será contactado de seguida. No painel, o barbeiro vê: pedidos de marcação, dia e hora pretendidos, contactos do cliente. Quando tem tempo, confirma a marcação com uma mensagem simples. O João recebe a confirmação sem precisar de ligar nem insistir.',
         'examples.florist.title': 'Florista',
-        'examples.florist.desc': 'A Maria precisa de um ramo para domingo, dia do aniversário da mãe. Envia mensagem na quinta-feira. A encomenda fica registada por data e ocasião. Recebe confirmação clara do que foi pedido e quando será entregue. No domingo, tudo está pronto sem stress.',
+        'examples.florist.desc': 'A Maria quer encomendar um ramo para domingo, aniversário da mãe. Envia uma mensagem na quinta-feira ou liga fora de horas. Recebe uma resposta clara com as opções e valores. A encomenda fica registada por: data, tipo de ramo, ocasião. No painel, a florista vê todas as encomendas organizadas por dia. Se quiser, a Maria pode concluir o pedido pela loja online. No domingo, tudo está preparado sem stress nem confusões.',
         'examples.clinic.title': 'Clínica de estética',
-        'examples.clinic.desc': 'A Ana quer marcar um tratamento para a próxima semana. Envia mensagem às 22h, quando a clínica já está fechada. Recebe uma resposta profissional e calma, explicando que será contactada no dia seguinte. No dia seguinte, a marcação está organizada e pronta para confirmar.',
+        'examples.clinic.desc': 'A Ana quer marcar um tratamento para a próxima semana. Envia mensagem às 22h ou liga quando a clínica já está fechada. Recebe uma resposta profissional a informar que será contactada no dia seguinte. No painel da clínica: os pedidos ficam organizados, tratamentos e horários ficam claros, nada se perde. No dia seguinte, a marcação é confirmada rapidamente. A Ana sente atendimento profissional, mesmo fora de horas.',
         'examples.restaurant.title': 'Restaurante',
-        'examples.restaurant.desc': 'O Pedro quer reservar uma mesa para 6 pessoas no sábado à noite. Envia mensagem durante a hora de almoço, quando o restaurante está cheio. Em vez de atender o telefone no meio do serviço, recebe a mensagem organizada. Responde quando tem tempo e o Pedro recebe confirmação clara.',
+        'examples.restaurant.desc': 'O Pedro quer reservar uma mesa para 6 pessoas no sábado à noite. Envia mensagem durante a hora de almoço ou liga quando o restaurante está cheio. Em vez de interromper o serviço: a mensagem fica registada, a chamada recebe resposta automática com instruções claras. No painel: reservas organizadas por dia e hora, pedidos especiais destacados. Quando há tempo, a reserva é confirmada. O Pedro recebe uma resposta clara e não precisa de voltar a ligar.',
         'examples.bakery.title': 'Padaria',
-        'examples.bakery.desc': 'A Sofia quer encomendar um bolo de aniversário para sexta-feira. Envia mensagem na terça-feira com os detalhes. A encomenda fica registada por data. Recebe confirmação rápida sobre disponibilidade e preço. Na sexta-feira, o bolo está pronto sem surpresas.',
+        'examples.bakery.desc': 'A Sofia quer encomendar um bolo de aniversário para sexta-feira. Envia mensagem ou liga para pedir informações. Recebe resposta clara com opções, preços e prazos. O pedido fica registado por data. Se quiser, a encomenda pode ser finalizada pela loja online. No painel: todos os bolos por dia, detalhes de cada encomenda, nada esquecido. Na sexta-feira, o bolo está pronto como combinado.',
         'examples.workshop.title': 'Oficina',
-        'examples.workshop.desc': 'O Rui precisa de fazer a revisão do carro. Envia mensagem a pedir orçamento e disponibilidade. Enquanto está a trabalhar num carro, recebe a mensagem organizada. Quando termina, responde com o orçamento e as datas disponíveis. O Rui recebe tudo claro e marca sem precisar de ligar várias vezes.',
+        'examples.workshop.desc': 'O Rui precisa de fazer a revisão do carro. Envia mensagem ou liga a pedir orçamento e disponibilidade. Enquanto o mecânico está a trabalhar: o pedido fica registado, a chamada é atendida com informação básica. No painel: pedidos por responder, orçamentos enviados, marcações pendentes. Quando termina o trabalho atual, responde com o orçamento e datas disponíveis. O Rui marca sem chamadas repetidas nem confusão.',
         'examples.note': 'Em todas as situações, a ideia é a mesma: menos chamadas, menos confusão, mais tranquilidade.',
 
         // Sobre
@@ -166,7 +166,7 @@ const translations = {
         'pricing.includes': 'Includes:',
         'pricing.limits': 'Limits:',
 
-        'pricing.starter.name': 'STARTER PLAN Online Presence',
+        'pricing.starter.name': 'STARTER PLAN<br>Online Presence',
         'pricing.starter.initial.label': '€100',
         'pricing.starter.initial.suffix': '/ initial setup',
         'pricing.starter.subtitle': 'Ideal for those who just want to be online and not think about it anymore.',
@@ -178,7 +178,7 @@ const translations = {
         'pricing.starter.limit2': 'Bigger changes are agreed and quoted beforehand',
         'pricing.starter.renewal': 'Yearly renewal: €100 · Maintenance: €10 / month',
 
-        'pricing.shop.name': 'ECOMMERCE PLAN Online Shop',
+        'pricing.shop.name': 'ECOMMERCE PLAN<br>Online Shop',
         'pricing.shop.initial.label': '€200',
         'pricing.shop.initial.suffix': '/ initial payment',
         'pricing.shop.subtitle': 'For those who want to sell online without complications.',
@@ -189,10 +189,10 @@ const translations = {
         'pricing.shop.feature4': 'Ongoing support',
         'pricing.shop.maintenance': 'Shop maintenance: €40 / month',
 
-        'pricing.support.name': 'AGENT PLAN Assisted Chat & Voice',
+        'pricing.support.name': 'AGENT PLAN<br>Assisted Chat & Voice',
         'pricing.support.price.label': '€200',
         'pricing.support.price.suffix': '/ initial payment',
-        'pricing.support.subtitle': 'For those who receive many messages and want everything organised.',
+        'pricing.support.subtitle': 'Organised messages.',
         'pricing.support.includes.starter': 'Includes the Starter Plan.',
         'pricing.support.feature1': 'Assisted chat handling',
         'pricing.support.feature2': 'Prepared out-of-hours messages',
@@ -207,17 +207,17 @@ const translations = {
         'examples.title': 'Practical examples',
         'examples.intro': 'Real situations where this kind of service helps in the daily life of a local business:',
         'examples.barbershop.title': 'Barbershop',
-        'examples.barbershop.desc': 'John wants to book for Saturday at 10am. He sends a message while you\'re cutting another client\'s hair. Instead of interrupting your work, you receive the message organised and reply when you finish. John gets quick confirmation and doesn\'t need to call.',
+        'examples.barbershop.desc': 'John wants to book a haircut for Saturday at 10am. He sends a message while the barber is cutting another client\'s hair. The request is automatically registered. If John calls, the call receives a clear response explaining how to book or that he will be contacted shortly. In the panel, the barber sees: booking requests, desired day and time, customer contacts. When he has time, he confirms the booking with a simple message. John receives the confirmation without needing to call or insist.',
         'examples.florist.title': 'Florist',
-        'examples.florist.desc': 'Maria needs a bouquet for Sunday, her mother\'s birthday. She sends a message on Thursday. The order is registered by date and occasion. You get clear confirmation of what was requested and when it will be delivered. On Sunday, everything is ready without stress.',
+        'examples.florist.desc': 'Maria wants to order a bouquet for Sunday, her mother\'s birthday. She sends a message on Thursday or calls outside business hours. She receives a clear response with options and prices. The order is registered by: date, type of bouquet, occasion. In the panel, the florist sees all orders organised by day. If she wants, Maria can complete the order through the online shop. On Sunday, everything is prepared without stress or confusion.',
         'examples.clinic.title': 'Beauty clinic',
-        'examples.clinic.desc': 'Ana wants to book a treatment for next week. She sends a message at 10pm, when the clinic is already closed. She receives a professional and calm response, explaining she will be contacted the next day. The next day, the appointment is organised and ready to confirm.',
+        'examples.clinic.desc': 'Ana wants to book a treatment for next week. She sends a message at 10pm or calls when the clinic is already closed. She receives a professional response informing her that she will be contacted the next day. In the clinic panel: requests are organised, treatments and schedules are clear, nothing is lost. The next day, the booking is confirmed quickly. Ana feels professional service, even outside business hours.',
         'examples.restaurant.title': 'Restaurant',
-        'examples.restaurant.desc': 'Pedro wants to book a table for 6 people on Saturday night. He sends a message during lunchtime, when the restaurant is full. Instead of answering the phone in the middle of service, you receive the message organised. You reply when you have time and Pedro gets clear confirmation.',
+        'examples.restaurant.desc': 'Pedro wants to book a table for 6 people on Saturday night. He sends a message during lunchtime or calls when the restaurant is full. Instead of interrupting service: the message is registered, the call receives an automatic response with clear instructions. In the panel: reservations organised by day and time, special requests highlighted. When there\'s time, the reservation is confirmed. Pedro receives a clear response and doesn\'t need to call again.',
         'examples.bakery.title': 'Bakery',
-        'examples.bakery.desc': 'Sofia wants to order a birthday cake for Friday. She sends a message on Tuesday with the details. The order is registered by date. You get quick confirmation about availability and price. On Friday, the cake is ready without surprises.',
+        'examples.bakery.desc': 'Sofia wants to order a birthday cake for Friday. She sends a message or calls to ask for information. She receives a clear response with options, prices and deadlines. The order is registered by date. If she wants, the order can be completed through the online shop. In the panel: all cakes by day, details of each order, nothing forgotten. On Friday, the cake is ready as agreed.',
         'examples.workshop.title': 'Auto Repair Shop',
-        'examples.workshop.desc': 'Rui needs to get his car serviced. He sends a message asking for a quote and availability. While you\'re working on a car, you receive the message organised. When you finish, you reply with the quote and available dates. Rui gets everything clear and books without needing to call multiple times.',
+        'examples.workshop.desc': 'Rui needs to get his car serviced. He sends a message or calls to ask for a quote and availability. While the mechanic is working: the request is registered, the call is answered with basic information. In the panel: requests to respond to, quotes sent, pending bookings. When he finishes the current job, he replies with the quote and available dates. Rui books without repeated calls or confusion.',
         'examples.note': 'In every case the idea is the same: fewer calls, less confusion, more peace of mind.',
 
         // About
@@ -288,7 +288,7 @@ const translations = {
         'pricing.includes': 'Incluye:',
         'pricing.limits': 'Límites:',
 
-        'pricing.starter.name': 'PLAN STARTER Presencia Online',
+        'pricing.starter.name': 'PLAN STARTER<br>Presencia Online',
         'pricing.starter.initial.label': '100€',
         'pricing.starter.initial.suffix': '/ pago inicial',
         'pricing.starter.subtitle': 'Ideal para quien solo quiere estar online y no pensar más en ello.',
@@ -300,7 +300,7 @@ const translations = {
         'pricing.starter.limit2': 'Cambios mayores se hablan y se presupuestan aparte',
         'pricing.starter.renewal': 'Renovación anual: 100€ · Mantenimiento: 10€ / mes',
 
-        'pricing.shop.name': 'PLAN ECOMMERCE Tienda Online',
+        'pricing.shop.name': 'PLAN ECOMMERCE<br>Tienda Online',
         'pricing.shop.initial.label': '200€',
         'pricing.shop.initial.suffix': '/ pago inicial',
         'pricing.shop.subtitle': 'Para quien quiere vender online sin complicaciones.',
@@ -311,10 +311,10 @@ const translations = {
         'pricing.shop.feature4': 'Apoyo continuo',
         'pricing.shop.maintenance': 'Mantenimiento de la tienda: 40€ / mes',
 
-        'pricing.support.name': 'PLAN AGENT Chat y Voz Asistidos',
+        'pricing.support.name': 'PLAN AGENT<br>Chat y Voz Asistidos',
         'pricing.support.price.label': '200€',
         'pricing.support.price.suffix': '/ pago inicial',
-        'pricing.support.subtitle': 'Para quien recibe muchos mensajes y quiere todo organizado.',
+        'pricing.support.subtitle': 'Mensajes organizados.',
         'pricing.support.includes.starter': 'Incluye el Plan Starter.',
         'pricing.support.feature1': 'Atención asistida por chat',
         'pricing.support.feature2': 'Mensajes preparados para fuera de horario',
@@ -329,17 +329,17 @@ const translations = {
         'examples.title': 'Ejemplos prácticos',
         'examples.intro': 'Algunas formas en que este tipo de servicio ayuda en el día a día de un negocio local:',
         'examples.barbershop.title': 'Barbería',
-        'examples.barbershop.desc': 'Juan quiere reservar para el sábado a las 10h. Envía un mensaje mientras está cortando el pelo a otro cliente. En lugar de interrumpir el trabajo, recibe el mensaje organizado y responde cuando termine. Juan recibe confirmación rápida y no necesita llamar.',
+        'examples.barbershop.desc': 'Juan quiere reservar un corte para el sábado a las 10h. Envía un mensaje mientras el barbero está cortando el pelo a otro cliente. El pedido queda registrado automáticamente. Si Juan llama, la llamada recibe una respuesta clara explicando cómo reservar o que será contactado a continuación. En el panel, el barbero ve: pedidos de reserva, día y hora deseados, contactos del cliente. Cuando tiene tiempo, confirma la reserva con un mensaje simple. Juan recibe la confirmación sin necesitar llamar ni insistir.',
         'examples.florist.title': 'Floristería',
-        'examples.florist.desc': 'María necesita un ramo para el domingo, día del cumpleaños de su madre. Envía un mensaje el jueves. El pedido queda registrado por fecha y ocasión. Recibe confirmación clara de lo que se pidió y cuándo se entregará. El domingo, todo está listo sin estrés.',
+        'examples.florist.desc': 'María quiere encargar un ramo para el domingo, cumpleaños de su madre. Envía un mensaje el jueves o llama fuera de horario. Recibe una respuesta clara con las opciones y precios. El pedido queda registrado por: fecha, tipo de ramo, ocasión. En el panel, la florista ve todos los pedidos organizados por día. Si quiere, María puede completar el pedido por la tienda online. El domingo, todo está preparado sin estrés ni confusiones.',
         'examples.clinic.title': 'Clínica de estética',
-        'examples.clinic.desc': 'Ana quiere reservar un tratamiento para la próxima semana. Envía un mensaje a las 22h, cuando la clínica ya está cerrada. Recibe una respuesta profesional y tranquila, explicando que será contactada al día siguiente. Al día siguiente, la reserva está organizada y lista para confirmar.',
+        'examples.clinic.desc': 'Ana quiere reservar un tratamiento para la próxima semana. Envía un mensaje a las 22h o llama cuando la clínica ya está cerrada. Recibe una respuesta profesional informando que será contactada al día siguiente. En el panel de la clínica: los pedidos quedan organizados, tratamientos y horarios quedan claros, nada se pierde. Al día siguiente, la reserva se confirma rápidamente. Ana siente atención profesional, incluso fuera de horario.',
         'examples.restaurant.title': 'Restaurante',
-        'examples.restaurant.desc': 'Pedro quiere reservar una mesa para 6 personas el sábado por la noche. Envía un mensaje durante la hora del almuerzo, cuando el restaurante está lleno. En lugar de atender el teléfono en medio del servicio, recibe el mensaje organizado. Responde cuando tiene tiempo y Pedro recibe confirmación clara.',
+        'examples.restaurant.desc': 'Pedro quiere reservar una mesa para 6 personas el sábado por la noche. Envía un mensaje durante la hora del almuerzo o llama cuando el restaurante está lleno. En lugar de interrumpir el servicio: el mensaje queda registrado, la llamada recibe respuesta automática con instrucciones claras. En el panel: reservas organizadas por día y hora, pedidos especiales destacados. Cuando hay tiempo, la reserva se confirma. Pedro recibe una respuesta clara y no necesita volver a llamar.',
         'examples.bakery.title': 'Panadería',
-        'examples.bakery.desc': 'Sofía quiere encargar una tarta de cumpleaños para el viernes. Envía un mensaje el martes con los detalles. El pedido queda registrado por fecha. Recibe confirmación rápida sobre disponibilidad y precio. El viernes, la tarta está lista sin sorpresas.',
+        'examples.bakery.desc': 'Sofía quiere encargar una tarta de cumpleaños para el viernes. Envía un mensaje o llama para pedir información. Recibe respuesta clara con opciones, precios y plazos. El pedido queda registrado por fecha. Si quiere, el pedido puede finalizarse por la tienda online. En el panel: todas las tartas por día, detalles de cada pedido, nada olvidado. El viernes, la tarta está lista como se acordó.',
         'examples.workshop.title': 'Taller',
-        'examples.workshop.desc': 'Rui necesita hacer la revisión del coche. Envía un mensaje pidiendo presupuesto y disponibilidad. Mientras está trabajando en un coche, recibe el mensaje organizado. Cuando termina, responde con el presupuesto y las fechas disponibles. Rui recibe todo claro y reserva sin necesitar llamar varias veces.',
+        'examples.workshop.desc': 'Rui necesita hacer la revisión del coche. Envía un mensaje o llama pidiendo presupuesto y disponibilidad. Mientras el mecánico está trabajando: el pedido queda registrado, la llamada es atendida con información básica. En el panel: pedidos por responder, presupuestos enviados, reservas pendientes. Cuando termina el trabajo actual, responde con el presupuesto y fechas disponibles. Rui reserva sin llamadas repetidas ni confusión.',
         'examples.note': 'En todos los casos la idea es la misma: menos llamadas, menos confusión, más tranquilidad.',
 
         // Sobre mí
@@ -386,7 +386,12 @@ function loadLanguage(lang) {
         if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
             element.placeholder = translation;
         } else {
-            element.textContent = translation;
+            // Usar innerHTML se a tradução contém HTML (como <br>)
+            if (translation.includes('<br>') || translation.includes('<')) {
+                element.innerHTML = translation;
+            } else {
+                element.textContent = translation;
+            }
         }
     });
     
