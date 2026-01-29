@@ -5,16 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="description"
-            content="Organização de emails e pedidos para clínicas. Serviço claro, simples e profissional."
+            content="Criação e manutenção de sites simples para pequenos negócios locais, com atendimento organizado e apoio contínuo."
         />
-        <title>Nuno Miranda — Organização Administrativa para Clínicas</title>
+        <title>Nuno Miranda — Sites simples e atendimento organizado para pequenos negócios</title>
         <meta
             property="og:title"
-            content="Nuno Miranda — Organização Administrativa para Clínicas"
+            content="Nuno Miranda — Sites simples e atendimento organizado para pequenos negócios"
         />
         <meta
             property="og:description"
-            content="Organização de emails e pedidos para clínicas. Serviço claro, simples e profissional."
+            content="Sites em dark mode, preços claros e apoio contínuo para pequenos negócios locais. Sem complicações."
         />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="pt_PT" />
@@ -48,11 +48,14 @@
                         ></span>
                     </button>
                     <ul class="nav-links" id="nav-links">
-                        <li><a href="#servicos" data-i18n="nav.services">Serviços</a></li>
-                        <li><a href="#precos" data-i18n="nav.pricing">Preços</a></li>
+                        <li><a href="#home" data-i18n="nav.home">Início</a></li>
+                        <li><a href="#para-quem" data-i18n="nav.for">Para quem</a></li>
+                        <li><a href="#servicos" data-i18n="nav.services">O que faço</a></li>
+                        <li><a href="#precos" data-i18n="nav.pricing">Planos</a></li>
+                        <li><a href="#exemplos" data-i18n="nav.examples">Exemplos</a></li>
                         <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
                         <li>
-                            <a href="#contacto" class="btn-contact" data-i18n="nav.contact">Contacto</a>
+                            <a href="#contacto" class="btn-contact" data-i18n="nav.contact">Contactos</a>
                         </li>
                     </ul>
                     <div class="nav-controls">
@@ -63,402 +66,349 @@
                             <div class="lang-dropdown">
                                 <div class="lang-option active" data-lang="pt-PT">Português</div>
                                 <div class="lang-option" data-lang="en">English</div>
+                                <div class="lang-option" data-lang="es">Español</div>
                             </div>
                         </div>
-                        <button class="theme-toggle" type="button" aria-label="Alternar tema">
-                            <span class="theme-icon">☀️</span>
-                        </button>
                     </div>
                 </div>
             </div>
         </nav>
 
         <main id="main">
-            <!-- Hero Section -->
+            <!-- 1. Hero Section -->
             <section id="home" class="hero">
                 <div class="container">
                     <div class="hero-content">
                         <h1 data-i18n="hero.title">
-                            Demasiados emails de pacientes, pedidos e mensagens para responder todos os dias?
+                            Tratamos do seu site e do atendimento. Sem complicações.
                         </h1>
                         <p class="hero-subtitle" data-i18n="hero.subtitle">
-                            Organizo os emails e pedidos da tua clínica para saberes o que é urgente, 
-                            o que pode esperar e o que já tem resposta preparada — sempre com controlo total da tua parte.
+                            Preços simples. Apoio contínuo. Sem preocupações.
                         </p>
                         <div class="hero-buttons">
                             <a href="#contacto" class="btn btn-primary" data-i18n="hero.cta.primary"
-                                >Falar comigo sobre a minha clínica</a
+                                >Falar comigo</a
                             >
-                            <a href="#como-funciona" class="btn btn-secondary" data-i18n="hero.cta.secondary"
-                                >Ver como funciona — sem compromisso</a
-                            >
+                        </div>
+                        <p class="hero-note" data-i18n="hero.note">
+                            Resposta rápida. Sem compromisso.
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Como posso ajudar -->
-            <section id="servicos" class="services">
+            <!-- 2. Para quem é este serviço -->
+            <section id="para-quem" class="services">
                 <div class="container">
-                    <h2 data-i18n="services.title">Como posso ajudar</h2>
-                    <p class="section-intro" data-i18n="services.intro">
-                        Numa clínica, cada email pode ser um paciente à espera de resposta.
-                        O problema é que nem tudo é urgente — mas tudo chega misturado.
+                    <h2 data-i18n="for.title">Para quem é este serviço</h2>
+                    <p class="section-intro" data-i18n="for.intro">
+                        Pensado para pequenos negócios locais que querem estar descansados:
+                        o site está tratado, o atendimento está organizado e sabem sempre quem chamar se algo falhar.
                     </p>
 
                     <div class="services-list">
                         <div class="service-item">
-                            <h3 data-i18n="services.item1.title">Organização e triagem de emails</h3>
-                            <p data-i18n="services.item1.desc">
-                                Separo o que é urgente do que pode esperar. Recebes uma lista organizada, 
-                                não uma caixa de correio cheia.
+                            <h3 data-i18n="for.item1.title">Pequenos negócios locais</h3>
+                            <p data-i18n="for.item1.desc">
+                                Barbearias, floristas, clínicas de estética, restaurantes e comércio local.
+                                Negócios que vivem do dia a dia e não querem perder tempo com “o site”.
                             </p>
                         </div>
 
                         <div class="service-item">
-                            <h3 data-i18n="services.item2.title">Separação de pedidos de marcação, dúvidas e mensagens internas</h3>
-                            <p data-i18n="services.item2.desc">
-                                Marcações, dúvidas de pacientes, orçamentos e emails internos ficam 
-                                organizados em categorias claras.
+                            <h3 data-i18n="for.item2.title">Quem não quer lidar com tecnologia</h3>
+                            <p data-i18n="for.item2.desc">
+                                Donos de negócio que preferem falar com uma pessoa e não mexer em painéis, contas
+                                e botões. Explico tudo em linguagem simples.
                             </p>
                         </div>
 
                         <div class="service-item">
-                            <h3 data-i18n="services.item3.title">Sugestões de resposta para perguntas frequentes</h3>
-                            <p data-i18n="services.item3.desc">
-                                Para perguntas comuns, preparo respostas que apenas precisas de rever e enviar. 
-                                <strong data-i18n="services.item3.highlight">Sempre revistas por ti.</strong>
-                            </p>
-                        </div>
-
-                        <div class="service-item">
-                            <h3 data-i18n="services.item4.title">Resumos claros de mensagens longas</h3>
-                            <p data-i18n="services.item4.desc">
-                                Mensagens extensas transformadas em resumos simples. 
-                                Percebes logo o essencial sem ler tudo.
-                            </p>
-                        </div>
-
-                        <div class="service-item">
-                            <h3 data-i18n="services.item5.title">Relatórios simples e fáceis de entender</h3>
-                            <p data-i18n="services.item5.desc">
-                                Vês como está a correr: quantos pedidos, quantas respostas, o que está em atraso. 
-                                Sem complicações.
+                            <h3 data-i18n="for.item3.title">Quem só quer que as coisas funcionem</h3>
+                            <p data-i18n="for.item3.desc">
+                                Se o seu objetivo é: “quero estar online, atender bem e não ter dores de cabeça”,
+                                este serviço é para si.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Exemplo Prático -->
-            <section class="example">
+            <!-- 3. O que faço (em linguagem simples) -->
+            <section id="servicos" class="services">
                 <div class="container">
-                    <h2 data-i18n="example.title">Exemplo real</h2>
-                    <p class="example-intro" data-i18n="example.intro">
-                        Uma clínica recebe pedidos de marcação, orçamentos, dúvidas de pacientes 
-                        e emails internos todos os dias.
+                    <h2 data-i18n="services.title">O que faço por si</h2>
+                    <p class="section-intro" data-i18n="services.intro">
+                        Trabalho para que o seu negócio esteja bem apresentado online e para que o atendimento por mensagens
+                        seja organizado, simples e tranquilo.
                     </p>
-                    
-                    <div class="example-content">
-                        <p data-i18n="example.text">Em vez de leres tudo, recebes uma lista organizada:</p>
-                        <ul class="example-list">
-                            <li><strong data-i18n="example.urgent">Urgente</strong> <span data-i18n="example.urgent.desc">(responder hoje)</span></li>
-                            <li><strong data-i18n="example.bookings">Marcações</strong></li>
-                            <li><strong data-i18n="example.faq">Dúvidas frequentes</strong></li>
-                            <li><strong data-i18n="example.later">Para tratar mais tarde</strong></li>
-                        </ul>
-                        <p data-i18n="example.conclusion">
-                            Se um paciente faz uma pergunta comum, já tens uma resposta sugerida.
-                            Só precisas de rever e enviar.
-                        </p>
+
+                    <div class="services-list">
+                        <div class="service-item">
+                            <h3 data-i18n="services.item1.title">Criação e manutenção de websites simples</h3>
+                            <p data-i18n="services.item1.desc">
+                                Crio um site escuro, limpo e fácil de ler. Atualizo textos, horários e preços quando for preciso.
+                                Não tem de mexer em nada.
+                            </p>
+                        </div>
+
+                        <div class="service-item">
+                            <h3 data-i18n="services.item2.title">Atendimento organizado por chat e mensagens</h3>
+                            <p data-i18n="services.item2.desc">
+                                Ajudo a organizar as mensagens que chegam. Marcações, dúvidas e pedidos ficam em listas simples,
+                                para responder com calma.
+                            </p>
+                        </div>
+
+                        <div class="service-item">
+                            <h3 data-i18n="services.item3.title">Mensagens automáticas fora de horas</h3>
+                            <p data-i18n="services.item3.desc">
+                                Preparo mensagens calmas e claras para quando o negócio está fechado, para que o cliente
+                                sinta que foi atendido e saiba quando terá resposta.
+                            </p>
+                        </div>
+
+                        <div class="service-item">
+                            <h3 data-i18n="services.item4.title">Organização de pedidos e contactos</h3>
+                            <p data-i18n="services.item4.desc">
+                                Junto pedidos parecidos, resumo mensagens longas e deixo tudo em registos claros:
+                                quem pediu o quê, quando e por onde.
+                            </p>
+                        </div>
                     </div>
-                    
+
                     <div class="trust-message">
-                        <strong data-i18n="example.trust">Nenhuma resposta é enviada automaticamente. Tens sempre a palavra final.</strong>
+                        <strong data-i18n="services.trust">
+                            Nada funciona sem controlo humano. Nada é enviado sem alguém rever e validar primeiro.
+                        </strong>
                     </div>
                 </div>
             </section>
 
-            <!-- Planos e preços -->
+            <!-- 4. Planos simples e claros -->
             <section id="precos" class="pricing">
                 <div class="container">
-                    <h2>Preços claros. Sem letras pequenas. Sem surpresas.</h2>
+                    <h2 data-i18n="pricing.title">Planos simples. Preços claros. Sem surpresas.</h2>
 
                     <div class="pricing-grid">
-                        <!-- Plano Base -->
+                        <!-- PLANO STARTER -->
                         <div class="pricing-card">
                             <div class="pricing-header">
-                                <h3>PLANO BASE</h3>
-                                <div class="price">30€ <span>/ mês</span></div>
-                                <p class="pricing-subtitle">
-                                    Ideal para clínicas pequenas.
+                                <h3 data-i18n="pricing.starter.name">PLANO STARTER — Presença Online</h3>
+                                <div class="price">
+                                    <span data-i18n="pricing.starter.initial.label">100€</span>
+                                    <span data-i18n="pricing.starter.initial.suffix"> / pagamento inicial</span>
+                                </div>
+                                <p class="pricing-subtitle" data-i18n="pricing.starter.subtitle">
+                                    Ideal para quem só quer estar online e não pensar mais nisso.
                                 </p>
                             </div>
 
                             <div class="pricing-body">
-                                <h4>Inclui:</h4>
+                                <h4 data-i18n="pricing.includes">Inclui:</h4>
                                 <ul>
-                                    <li>Organização e triagem de emails</li>
-                                    <li>
-                                        Sugestões de resposta (sempre revistas
-                                        por ti)
-                                    </li>
-                                    <li>
-                                        Resumos claros de pedidos e mensagens
-                                    </li>
+                                    <li data-i18n="pricing.starter.feature1">Criação de website informativo</li>
+                                    <li data-i18n="pricing.starter.feature2">Website estático profissional</li>
+                                    <li data-i18n="pricing.starter.feature3">Correções simples incluídas</li>
+                                    <li data-i18n="pricing.starter.feature4">Apoio básico</li>
                                 </ul>
 
-                                <h4>Limites:</h4>
-                                <ul>
-                                    <li>Até 500 emails por mês</li>
-                                    <li>Uso normal de uma caixa de correio</li>
-                                    <li>Suporte básico por email</li>
+                                <h4 data-i18n="pricing.limits">Limites:</h4>
+                                <ul class="limits">
+                                    <li data-i18n="pricing.starter.limit1">Até 1 alteração simples por mês</li>
+                                    <li data-i18n="pricing.starter.limit2">Alterações maiores combinadas e orçamentadas à parte</li>
                                 </ul>
 
-                                <p class="pricing-note">
-                                    Todas as sugestões são sempre revistas por ti antes de qualquer envio.
-                                </p>
-
-                                <p class="setup-fee">
-                                    Configuração inicial: 100€ (pagamento único)
+                                <p class="setup-fee" data-i18n="pricing.starter.renewal">
+                                    Renovação anual: 100€ · Manutenção: 10€ / mês
                                 </p>
                             </div>
                         </div>
 
-                        <!-- Plano Pro -->
+                        <!-- ADD-ON LOJA ONLINE -->
                         <div class="pricing-card featured">
-                            <div class="badge">Recomendado</div>
                             <div class="pricing-header">
-                                <h3>PLANO PRO</h3>
-                                <div class="price">50€ <span>/ mês</span></div>
-                                <p class="pricing-subtitle">
-                                    Para clínicas com mais volume e necessidade de organização interna.
+                                <h3 data-i18n="pricing.shop.name">ADD-ON — Loja Online Básica (PrestaShop)</h3>
+                                <div class="price">
+                                    <span data-i18n="pricing.shop.initial.label">350€</span>
+                                    <span data-i18n="pricing.shop.initial.suffix"> / a partir de</span>
+                                </div>
+                                <p class="pricing-subtitle" data-i18n="pricing.shop.subtitle">
+                                    Para quem quer vender online sem complicações.
                                 </p>
                             </div>
 
                             <div class="pricing-body">
-                                <h4>Inclui tudo do Plano Base, mais:</h4>
+                                <h4 data-i18n="pricing.includes">Inclui:</h4>
                                 <ul>
-                                    <li>
-                                        Assistente interno para consultar
-                                        documentos e procedimentos da clínica
-                                    </li>
-                                    <li>Relatórios mensais simples e organizados</li>
-                                    <li>Acompanhamento mais próximo</li>
+                                    <li data-i18n="pricing.shop.feature1">Loja online funcional</li>
+                                    <li data-i18n="pricing.shop.feature2">Atualizações feitas com cuidado</li>
+                                    <li data-i18n="pricing.shop.feature3">Pequenos ajustes incluídos</li>
+                                    <li data-i18n="pricing.shop.feature4">Apoio contínuo</li>
                                 </ul>
 
-                                <h4>Limites:</h4>
-                                <ul>
-                                    <li>Até 1.000 emails por mês</li>
-                                    <li>
-                                        Até 50 documentos internos (máx. 100
-                                        páginas no total)
-                                    </li>
-                                    <li>Até 300 consultas internas por mês</li>
-                                    <li>1 relatório mensal incluído</li>
-                                </ul>
-
-                                <p class="setup-fee">
-                                    Configuração inicial: 150€ (pagamento único)
+                                <p class="setup-fee" data-i18n="pricing.shop.maintenance">
+                                    Manutenção da loja: 40€ / mês
                                 </p>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Add-ons -->
-                    <div class="addons">
-                        <h3>Serviços opcionais (Add-ons)</h3>
+                        <!-- PLANO ATENDIMENTO -->
+                        <div class="pricing-card">
+                            <div class="pricing-header">
+                                <h3 data-i18n="pricing.support.name">PLANO ATENDIMENTO — Chat e Voz Assistidos</h3>
+                                <div class="price">
+                                    <span data-i18n="pricing.support.price.label">30€</span>
+                                    <span data-i18n="pricing.support.price.suffix"> / mês, a partir de</span>
+                                </div>
+                                <p class="pricing-subtitle" data-i18n="pricing.support.subtitle">
+                                    Para quem recebe muitas mensagens e quer tudo organizado.
+                                </p>
+                            </div>
 
-                        <div class="addon-item">
-                            <h4>
-                                Apoio ao atendimento via WhatsApp — +20€ / mês
-                            </h4>
-                            <ul>
-                                <li>Até 300 mensagens por mês</li>
-                                <li>
-                                    Sugestões de resposta, sempre com validação
-                                    humana
-                                </li>
-                            </ul>
-                        </div>
+                            <div class="pricing-body">
+                                <h4 data-i18n="pricing.includes">Inclui:</h4>
+                                <ul>
+                                    <li data-i18n="pricing.support.feature1">Atendimento por chat assistido</li>
+                                    <li data-i18n="pricing.support.feature2">Mensagens fora de horas preparadas com antecedência</li>
+                                    <li data-i18n="pricing.support.feature3">Organização de pedidos e contactos por tema</li>
+                                    <li data-i18n="pricing.support.feature4">Resumos claros do que foi pedido</li>
+                                </ul>
 
-                        <div class="addon-item">
-                            <h4>Mensagens de voz ou necessidades específicas</h4>
-                            <ul>
-                                <li>Serviço opcional</li>
-                                <li>
-                                    Preço ajustado conforme volume
-                                </li>
-                                <li>Limites definidos antes de avançar</li>
-                            </ul>
+                                <p class="setup-fee" data-i18n="pricing.support.setup">
+                                    Configuração inicial aplicada consoante o seu negócio.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
                     <div class="note-box">
-                        <h4>Nota importante:</h4>
-                        <p>
-                            Todos os serviços têm limites mensais claros. Se os
-                            limites forem atingidos, aviso antes de qualquer
-                            custo extra. Serviços externos podem ter custos adicionais, 
-                            sempre comunicados com antecedência.
+                        <h4 data-i18n="pricing.note.title">Nota importante:</h4>
+                        <p data-i18n="pricing.note.text">
+                            Todos os preços são falados com calma antes de avançar. Se for preciso algo fora do combinado,
+                            explico primeiro, sem pressão. Sem letras pequenas.
                         </p>
                     </div>
                 </div>
             </section>
 
-            <!-- Como funciona -->
-            <section id="como-funciona" class="how-it-works">
+            <!-- 5. Exemplos práticos -->
+            <section id="exemplos" class="example">
                 <div class="container">
-                    <h2>Como funciona</h2>
+                    <h2 data-i18n="examples.title">Exemplos práticos</h2>
+                    <p class="example-intro" data-i18n="examples.intro">
+                        Alguns exemplos de como este tipo de serviço pode ajudar no dia a dia de um negócio local:
+                    </p>
 
-                    <div class="steps-grid">
-                        <div class="step">
-                            <div class="step-number">1</div>
-                            <h3>Conversa inicial</h3>
-                            <p>
-                                Falamos sobre o dia a dia da tua clínica e vemos, de forma honesta, 
-                                se faz sentido trabalhar juntos.
+                    <div class="services-list">
+                        <div class="service-item">
+                            <h3 data-i18n="examples.barbershop.title">Barbearia</h3>
+                            <p data-i18n="examples.barbershop.desc">
+                                Marcações por mensagem, respostas rápidas a horários e preços.
+                                Menos chamadas em hora de trabalho.
                             </p>
                         </div>
 
-                        <div class="step">
-                            <div class="step-number">2</div>
-                            <h3>Proposta clara</h3>
-                            <p>
-                                Recebes uma proposta simples, com preços e limites bem definidos.
+                        <div class="service-item">
+                            <h3 data-i18n="examples.florist.title">Florista</h3>
+                            <p data-i18n="examples.florist.desc">
+                                Encomendas organizadas por data e ocasião, confirmações claras e registo simples
+                                do que já foi entregue.
                             </p>
                         </div>
 
-                        <div class="step">
-                            <div class="step-number">3</div>
-                            <h3>Implementação</h3>
-                            <p>
-                                Configuro tudo e começamos. Estou disponível
-                                para esclarecer dúvidas.
+                        <div class="service-item">
+                            <h3 data-i18n="examples.clinic.title">Clínica de estética</h3>
+                            <p data-i18n="examples.clinic.desc">
+                                Marcações claras, lembretes preparados e mensagens profissionais fora de horas,
+                                sem parecerem frias.
                             </p>
                         </div>
 
-                        <div class="step">
-                            <div class="step-number">4</div>
-                            <h3>Acompanhamento contínuo</h3>
-                            <p>
-                                Mantemo-nos em contacto e ajustamos se necessário.
+                        <div class="service-item">
+                            <h3 data-i18n="examples.restaurant.title">Restaurante</h3>
+                            <p data-i18n="examples.restaurant.desc">
+                                Reservas por mensagem, respostas simples sobre menus e horários.
+                                Menos chamadas, menos confusão.
                             </p>
                         </div>
+                    </div>
+
+                    <div class="trust-message">
+                        <strong data-i18n="examples.note">
+                            Em todas as situações, a ideia é a mesma: menos chamadas, menos confusão, mais tranquilidade.
+                        </strong>
                     </div>
                 </div>
             </section>
 
-            <!-- Sobre mim -->
+            <!-- 6. Sobre mim -->
             <section id="sobre" class="about">
                 <div class="container">
-                    <h2>Sobre mim</h2>
+                    <h2 data-i18n="about.title">Sobre mim</h2>
                     <div class="about-content">
                         <div class="about-text">
-                            <p>
-                                Chamo-me Nuno Miranda. Trabalho com sistemas que organizam informação e facilitam 
-                                o dia a dia de pequenas empresas. Não vendo tecnologia complicada — ajudo a resolver 
-                                problemas práticos de forma simples.
+                            <p data-i18n="about.p1">
+                                Chamo-me Nuno Miranda. Trabalho diretamente com donos de pequenos negócios que
+                                querem soluções simples, estáveis e claras.
                             </p>
-                            <p>
-                                Tenho formação em Engenharia Informática e mais de 5 anos de experiência a trabalhar 
-                                diretamente com empresas reais, incluindo na área da saúde. Ao longo deste tempo, 
-                                aprendi que as melhores soluções são as que funcionam sem criar mais problemas.
+                            <p data-i18n="about.p2">
+                                Já trabalhei com empresas reais, com rotinas apertadas e pouco tempo para “tratar do site”.
+                                Aprendi que o mais importante é ter alguém do outro lado que assume responsabilidade
+                                e fala a mesma língua.
                             </p>
-                            <p>
-                                Trabalho de forma clara e direta. Se algo não funcionar como deve, ajusto. 
-                                Se não conseguir resolver um problema, digo com honestidade. 
-                                Prefiro ter clientes satisfeitos a longo prazo do que fazer promessas que não consigo cumprir.
+                            <p data-i18n="about.p3">
+                                Gosto de explicar tudo de forma simples, sem termos complicados. Acompanho ao longo do tempo,
+                                não só no início. Se algo não fizer sentido, preferimos ajustar em conjunto do que forçar uma solução.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Porque trabalhar comigo -->
-            <section class="why">
-                <div class="container">
-                    <h2>Porque trabalhar comigo</h2>
-
-                    <div class="why-grid">
-                        <div class="why-item">
-                            <h3>Contacto direto comigo</h3>
-                            <p>
-                                Falas sempre comigo, não com equipas ou
-                                assistentes.
-                            </p>
-                        </div>
-
-                        <div class="why-item">
-                            <h3>Linguagem clara e sem jargão</h3>
-                            <p>
-                                Explico tudo de forma simples, sem termos técnicos.
-                            </p>
-                        </div>
-
-                        <div class="why-item">
-                            <h3>Preços transparentes</h3>
-                            <p>Sabes sempre quanto pagas e porquê.</p>
-                        </div>
-
-                        <div class="why-item">
-                            <h3>Sem contratos longos</h3>
-                            <p>
-                                Possibilidade de cancelar quando quiseres.
-                            </p>
-                        </div>
-
-                        <div class="why-item">
-                            <h3>Responsabilidade</h3>
-                            <p>
-                                Se algo não funcionar, ajusto. É essa a garantia.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- CTA Final -->
+            <!-- 7. CTA Final -->
             <section class="cta-final">
                 <div class="container">
-                    <h2>Se a tua clínica recebe emails todos os dias e sentes que estás sempre atrasado nas respostas, este serviço foi feito para ti.</h2>
-                    <a href="#contacto" class="btn btn-primary btn-large">Falar comigo</a>
+                    <h2 data-i18n="cta.title">
+                        Se quer ter o site tratado e o atendimento organizado, sem se preocupar com a parte técnica, posso ajudar.
+                    </h2>
+                    <a href="#contacto" class="btn btn-primary btn-large" data-i18n="cta.button">Falar comigo</a>
                 </div>
             </section>
 
             <!-- Contactos -->
             <section id="contacto" class="contact">
                 <div class="container">
-                    <h2>Contactos</h2>
+                    <h2 data-i18n="contact.title">Contactos</h2>
 
                     <div class="contact-info">
                         <div class="contact-item">
-                            <strong>Telefone:</strong>
+                            <strong data-i18n="contact.phone">Telefone:</strong>
                             <a href="tel:+351935120439">+351 935 120 439</a>
                         </div>
 
                         <div class="contact-item">
-                            <strong>Email:</strong>
+                            <strong data-i18n="contact.email">Email:</strong>
                             <a href="mailto:nuno_miranda@outlook.com"
                                 >nuno_miranda@outlook.com</a
                             >
                         </div>
 
                         <div class="contact-item">
-                            <strong>Website:</strong>
+                            <strong data-i18n="contact.website">Website:</strong>
                             <a href="https://www.nunomiranda.dev" target="_blank" rel="noopener"
                                 >www.nunomiranda.dev</a
                             >
                         </div>
 
                         <div class="contact-item">
-                            <strong>Localização:</strong>
-                            <span>Portugal</span>
+                            <strong data-i18n="contact.location">Localização:</strong>
+                            <span data-i18n="contact.location.value">Portugal</span>
                         </div>
                     </div>
 
-                    <p class="contact-note">
-                        Se preferires, liga-me diretamente ou envia um email. Responderei assim que possível.
+                    <p class="contact-note" data-i18n="contact.note">
+                        Pode ligar, enviar email ou mensagem. O objetivo é tirar-lhe peso dos ombros, não acrescentar trabalho.
                     </p>
                 </div>
             </section>
@@ -469,7 +419,7 @@
             <div class="container">
                 <div class="footer-content">
                     <div class="footer-social">
-                        <p>Redes profissionais:</p>
+                        <p data-i18n="footer.social">Redes profissionais:</p>
                         <ul>
                             <li>
                                 <a

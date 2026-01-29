@@ -54,44 +54,26 @@ function initLanguageSystem() {
     });
   });
   
-  // Carregar idioma salvo ou padrão
-  const savedLang = localStorage.getItem('preferredLanguage') || 'pt-PT';
+  // Carregar idioma inicial (IP/locale do utilizador via idioma do navegador)
+  const savedLang = localStorage.getItem('preferredLanguage');
+  let initialLang = 'pt-PT';
+
+  if (savedLang) {
+    initialLang = savedLang;
+  } else if (typeof navigator !== 'undefined' && navigator.language) {
+    const browserLang = navigator.language.toLowerCase();
+    if (browserLang.startsWith('pt')) {
+      initialLang = 'pt-PT';
+    } else if (browserLang.startsWith('es')) {
+      initialLang = 'es';
+    } else {
+      initialLang = 'en';
+    }
+  }
+
   if (typeof loadLanguage === 'function') {
-    loadLanguage(savedLang);
+    loadLanguage(initialLang);
   }
-}
-
-// Sistema de Theme Toggle
-function initThemeSystem() {
-  const themeToggle = document.querySelector('.theme-toggle');
-  if (!themeToggle) return;
-  
-  // Carregar tema salvo (dark mode é padrão)
-  const savedTheme = localStorage.getItem('theme') || 'dark';
-  if (savedTheme === 'light') {
-    document.body.classList.add('light-mode');
-    updateThemeIcon(true);
-  } else {
-    updateThemeIcon(false);
-  }
-  
-  // Toggle theme
-  themeToggle.addEventListener('click', () => {
-    const isLight = document.body.classList.toggle('light-mode');
-    localStorage.setItem('theme', isLight ? 'light' : 'dark');
-    updateThemeIcon(isLight);
-  });
-}
-
-function updateThemeIcon(isLight) {
-  const themeToggle = document.querySelector('.theme-toggle');
-  if (!themeToggle) return;
-  
-  themeToggle.innerHTML = isLight 
-    ? '<span class="theme-icon">🌙</span>' 
-    : '<span class="theme-icon">☀️</span>';
-  
-  themeToggle.setAttribute('aria-label', isLight ? 'Ativar modo escuro' : 'Ativar modo claro');
 }
 
 // Adicionar classe active ao link de navegação baseado na seção visível
@@ -191,5 +173,4 @@ if (menuBtn && menu) {
 // Inicializar sistemas ao carregar página
 document.addEventListener('DOMContentLoaded', () => {
   initLanguageSystem();
-  initThemeSystem();
 });
