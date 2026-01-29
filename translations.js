@@ -375,7 +375,9 @@ function loadLanguage(lang) {
     // Atualizar botão de idioma
     const langBtn = document.querySelector('.lang-btn');
     if (langBtn) {
-        const langText = lang === 'pt-PT' ? 'PT' : 'EN';
+        let langText = 'PT';
+        if (lang === 'en') langText = 'EN';
+        else if (lang === 'es') langText = 'ES';
         langBtn.innerHTML = `<span>${langText}</span> <span style="font-size: 0.8em;">▼</span>`;
     }
     
